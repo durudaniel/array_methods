@@ -104,13 +104,14 @@ console.log(multiply)
 // write a javascript to multiply all element by index of the array
 const indexNumber = [23,34,56,7,8]
 function multiplyByIndex(number,index){
-    console.log(number)
+    
     return number * index
 }
 const indexResult = indexNumber.map(multiplyByIndex)
 console.log(indexResult)
 
 // write a javascript to filter only numbers in an array
+
 
 const stringNumber = ["daniel",34,67,"edu",78]
 
