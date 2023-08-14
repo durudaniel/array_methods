@@ -222,3 +222,13 @@ const deadPrint = dead_list
   });
 
 console.log(deadPrint);
+
+const fruit = "Apple";
+for (i in fruit) {
+  if ("A" === fruit[i]) {
+    console.log(`A is a letter in ${fruit}`);
+  } else {
+    console.log(`A is not a letter in ${fruit}`);
+  }
+  break;
+}
