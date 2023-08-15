@@ -232,3 +232,32 @@ for (i in fruit) {
   }
   break;
 }
+//###########################################################
+//FIND => find is used to find an element inside of an array#####################
+//FINDindex => findindex is used to find the index of that elemnet in an array###
+//###############################################################################
+
+//create an array of object and find an element
+
+const users = [
+  { user_name: "oblak david", age: 45 },
+  { user_name: "Ferouz michael", age: 67 },
+  { user_name: "ebuka george", age: 32 },
+];
+
+const result = users.find((user) => {
+  return user.user_name === "Ferouz michael";
+});
+const forIndex = users.findIndex((index) => {
+  return index.user_name === "Ferouz michael";
+});
+console.log(result);
+console.log(forIndex);
+
+// create a javascript array containing numbers [45,7,6,8,0,2] and get 0 from there
+
+const numArr = [45, 7, 6, 8, 0, 2];
+const extract = numArr.find((pick) => {
+  return pick === 45;
+});
+console.log(extract);
