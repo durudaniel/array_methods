@@ -1,32 +1,27 @@
 const copy_detail = { music_name: "dax", net_worth: "$1000000" };
 const copy_origin = { country: "nigerai" };
 const concat_detail_origin = { ...copy_detail, ...copy_origin };
-console.log(concat_detail_origin);
+
 //spread two arrays and square root each element
 const firstArray = [25, 4, 9];
 const secondArray = [36, 49, 144];
 const spreadArrays = [...firstArray, ...secondArray];
-console.log(spreadArrays.map(Math.sqrt));
 
 const programmingLangauges = ["python", "c++", "javascript", "java"];
-console.log(programmingLangauges.sort());
 
 let gameType = new Map();
 gameType.set("game year", 2019);
 gameType.set("name", "fifa mobile");
 gameType.set("played", true);
-console.log(gameType);
 
 const foodToEat = new Map();
 foodToEat.set("rice", "yes u can");
-console.log(foodToEat);
 
 function food(rice) {
   return rice;
 }
 const riceMap = new Map();
 riceMap.set("rice", "yes u can eat it");
-console.log(food(riceMap));
 
 /* ##TASKONMAP##
 1. write a javascript map to add the following values 
@@ -45,13 +40,12 @@ countryAndStateMap.set("Ryu", "japan");
 countryAndStateMap.set("Ken", "U.S.A");
 countryAndStateMap.set("Gulie", "U.S.A");
 countryAndStateMap.set("Blanka", "Brazil");
-console.log(country(countryAndStateMap));
 
 for (var value of countryAndStateMap.values()) {
-  console.log(value);
+  
 }
 for (var [keys, values] of countryAndStateMap.entries()) {
-  console.log(`${keys} is a state in ${values}`);
+  
 }
 // write a javascript to add the length of array on each element
 const arrMap = [2, 3, 7, 8, 9];
@@ -66,7 +60,6 @@ function lengthOfAnArray(arrLength, number) {
     return `the length of ${arrLength} is not even equalled to or less than ${number}.`;
   }
 }
-console.log(lengthOfAnArray([23, 45, 56, 78, 76, 8, 9], 56));
 
 /* write a javascript array object : name,age,and occupation and filter age above 45 years with
 programming occupation and sort by name */
@@ -88,8 +81,6 @@ const filterusers = usersObject
     if (x.Name < r.Name) return -1;
     if (x.Name > r.Name) return 1;
   });
-
-console.log(filterusers);
 const object = { file: "documents", class: "jss1" };
 
 // wirte a javascript to multiply all element by the the length
@@ -97,7 +88,6 @@ const lengthNumber = [3, 6, 7, 9, 20];
 const multiply = lengthNumber.map((index) => {
   return index * lengthNumber.length;
 });
-console.log(multiply);
 
 // write a javascript to multiply all element by index of the array
 const indexNumber = [23, 34, 56, 7, 8];
@@ -105,14 +95,12 @@ function multiplyByIndex(number, index) {
   return number * index;
 }
 const indexResult = indexNumber.map(multiplyByIndex);
-console.log(indexResult);
 
 // write a javascript to filter only numbers in an array
 
 const stringNumber = ["daniel", 34, 67, "edu", 78];
 
 const filterAllNumber = stringNumber.filter(Number);
-console.log(filterAllNumber);
 
 const productionName = [
   { Name: "iphone", price: 17000, importPrice: 500 },
@@ -122,7 +110,6 @@ const productionName = [
 const addPriceAndImportPrice = productionName.map((expenses) => {
   return expenses.importPrice + expenses.price;
 });
-console.log(addPriceAndImportPrice);
 
 function numberOfStudent(pass, fail) {
   if (pass == 5 && fail >= 10) return " teaching perfomance is too poor";
@@ -132,8 +119,6 @@ function numberOfStudent(pass, fail) {
     return "no performances";
   }
 }
-console.log(numberOfStudent(5, 10));
-console.log(numberOfStudent(15, 7));
 
 //write a javascript tp multiply the price of cars by it's number
 
@@ -164,7 +149,6 @@ const add_file = personal_file.map((add) => {
     fullName: add.surname + " " + add.firstName,
   };
 });
-console.log(add_file);
 
 /*creat a javascript of dead list and filter dead record from 2015 and above*/
 
@@ -221,8 +205,6 @@ const deadPrint = dead_list
     if (m.murgeName > n.murgeName) return 1;
   });
 
-console.log(deadPrint);
-
 const fruit = "Apple";
 for (i in fruit) {
   if ("A" === fruit[i]) {
@@ -251,8 +233,6 @@ const result = users.find((user) => {
 const forIndex = users.findIndex((index) => {
   return index.user_name === "Ferouz michael";
 });
-console.log(result);
-console.log(forIndex);
 
 // create a javascript array containing numbers [45,7,6,8,0,2] and get 0 from there
 
@@ -260,4 +240,18 @@ const numArr = [45, 7, 6, 8, 0, 2];
 const extract = numArr.find((pick) => {
   return pick === 45;
 });
-console.log(extract);
+
+const cake = [1, 2, 3, 4, 5];
+const plate = [
+  "plate one",
+  "plate two",
+  "plate three",
+  "plate four",
+  "plate five",
+];
+for (i = 0; i < cake.length; i++) {
+  for (h = 0; h < plate.length; h++) {
+    console.log(`cake ${cake[h]} in ${plate[h]} is served`);
+  }
+  break;
+}
