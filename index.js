@@ -251,7 +251,13 @@ const plate = [
 ];
 for (i = 0; i < cake.length; i++) {
   for (h = 0; h < plate.length; h++) {
-    console.log(`cake ${cake[h]} in ${plate[h]} is served`);
+    console.log(`cake${ cake[h]} in ${plate[h]} is served`);
   }
   break;
 }
+const arr_detail = [10,5,7,50];
+
+const reduce_arr = arr_detail.reduce((accum,index) => {
+    return accum + index
+},0);
+console.log(reduce_arr)
