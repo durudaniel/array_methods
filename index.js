@@ -260,4 +260,17 @@ const arr_detail = [10,5,7,50];
 const reduce_arr = arr_detail.reduce((accum,index) => {
     return accum + index
 },0);
-console.log(reduce_arr)
+
+
+//write a javascript to sum users expenses for the month
+
+const budget = [
+    {user: "redicc",monthlyExpenses: 500},
+    {user: "vin JR",monthlyExpenses: 1000},
+    {user: "derock",monthlyExpenses: 3500},
+];
+
+const expenses = budget.reduce((sum,income) =>{
+  return sum + income.monthlyExpenses
+},0);
+console.log(`the sum total of the users ependiture is: ${expenses}`)
