@@ -42,10 +42,8 @@ countryAndStateMap.set("Gulie", "U.S.A");
 countryAndStateMap.set("Blanka", "Brazil");
 
 for (var value of countryAndStateMap.values()) {
-  
 }
 for (var [keys, values] of countryAndStateMap.entries()) {
-  
 }
 // write a javascript to add the length of array on each element
 const arrMap = [2, 3, 7, 8, 9];
@@ -251,26 +249,39 @@ const plate = [
 ];
 for (i = 0; i < cake.length; i++) {
   for (h = 0; h < plate.length; h++) {
-    console.log(`cake${ cake[h]} in ${plate[h]} is served`);
+    console.log(`cake${cake[h]} in ${plate[h]} is served`);
   }
   break;
 }
-const arr_detail = [10,5,7,50];
+const arr_detail = [10, 5, 7, 50];
 
-const reduce_arr = arr_detail.reduce((accum,index) => {
-    return accum + index
-},0);
-
+const reduce_arr = arr_detail.reduce((accum, index) => {
+  return accum + index;
+}, 0);
 
 //write a javascript to sum users expenses for the month
 
 const budget = [
-    {user: "redicc",monthlyExpenses: 500},
-    {user: "vin JR",monthlyExpenses: 1000},
-    {user: "derock",monthlyExpenses: 3500},
+  { user: "redicc", monthlyExpenses: 500 },
+  { user: "vin JR", monthlyExpenses: 1000 },
+  { user: "derock", monthlyExpenses: 3500 },
 ];
 
-const expenses = budget.reduce((sum,income) =>{
-  return sum + income.monthlyExpenses
-},0);
-console.log(`the sum total of the users ependiture is: ${expenses}`)
+const expenses = budget.reduce((sum, income) => {
+  return sum + income.monthlyExpenses;
+}, 0);
+console.log(`the sum total of the users ependiture is: ${expenses}`);
+
+const students_name = ["daniel", "peter", "sammy"];
+const score = [21, 43, 67];
+for (i = 0; i < students_name.length; i++) {
+  for (j = 0; j < score.length; j++) {
+    const result = students_name[j] + " has " + score[j] + " scores ";
+
+  }
+  break
+}
+
+const pets = ["dog","cats","fish","rat"];
+const rearable = pets.includes("fish")
+console.log(rearable)
