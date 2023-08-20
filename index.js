@@ -267,7 +267,7 @@ const budget = [
   { user: "derock", monthlyExpenses: 3500 },
 ];
 
-const expenses = budget.reduce((sum, income) => {
+const expenses = budget.reduce((sum, income, hit, sup) => {
   return sum + income.monthlyExpenses;
 }, 0);
 console.log(`the sum total of the users ependiture is: ${expenses}`);
@@ -277,11 +277,28 @@ const score = [21, 43, 67];
 for (i = 0; i < students_name.length; i++) {
   for (j = 0; j < score.length; j++) {
     const result = students_name[j] + " has " + score[j] + " scores ";
-
   }
-  break
+  break;
 }
 
-const pets = ["dog","cats","fish","rat"];
-const rearable = pets.includes("fish")
-console.log(rearable)
+const pets = ["dog", "cats", "fish", "rat"];
+const rearable = pets.includes("fish");
+console.log(rearable);
+
+const foot_wears = [
+  { type: "cover shoes", amount: 200, number: 3 },
+  { type: "sandals", amount: 110, number: 8 },
+  { type: " canvas shoes", amount: 800, number: 2 },
+];
+
+const allShoesValue = foot_wears
+  .map((result) => {
+    return {
+      ...result,
+      total: result.amount * result.number,
+    };
+  })
+  .reduce((value, totalValue) => {
+    return value + totalValue.total;
+  }, 0);
+console.log(allShoesValue);
