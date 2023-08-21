@@ -301,4 +301,15 @@ const allShoesValue = foot_wears
   .reduce((value, totalValue) => {
     return value + totalValue.total;
   }, 0);
-console.log(allShoesValue);
+
+const animal = [
+  { parent: "lion" },
+  { parent: "tiger" },
+  { parent: "elephant" },
+  { parent: "horse" },
+];
+let youngOnes = ["cub", "pup", "calf", "foal"];
+
+youngOnes.forEach((name)=> console.log(`youngeOnes: ${name}`))
+//const combine = animal.concat(animalChildren);
+//console.log(combine);
