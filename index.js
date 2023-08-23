@@ -303,15 +303,32 @@ const allShoesValue = foot_wears
   }, 0);
 
 const animal = [
-  { parent: "lion"},
+  { parent: "lion" },
   { parent: "tiger" },
   { parent: "elephant" },
   { parent: "horse" },
 ];
 let youngOnes = ["cub", "pup", "calf", "foal"];
 
-const getSome = youngOnes.some((result) => {
-  return result === "pup" || result === "cub"
-})
-console.log(getSome)
- 
+const getSome = youngOnes.some((result, hub, tit) => {
+  console.log(result);
+  console.log(tit);
+  console.log(hub);
+  return result === "pup" || result === "cub";
+});
+console.log(getSome);
+
+const library = [
+  { bookName: "my life as a fairy", bookNumber: 4 },
+  { bookName: "all my wealth", bookNumber: 9 },
+  { bookName: "unbearable", bookNumber: 15 },
+  { bookName: "hooked", bookNumber: 6 },
+];
+const totalise = library.reduce((sum, total) => {
+  return sum + total.bookNumber;
+}, 0);
+console.log(totalise);
+const everyNumber = library.every((num) => {
+  return num.bookNumber <= 100
+});
+console.log(everyNumber);
