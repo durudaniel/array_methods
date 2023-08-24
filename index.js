@@ -325,10 +325,21 @@ const library = [
   { bookName: "hooked", bookNumber: 6 },
 ];
 const totalise = library.reduce((sum, total) => {
-  return sum + total.bookNumber;
+  return sum + total.bookName;
 }, 0);
 console.log(totalise);
 const everyNumber = library.every((num) => {
   return num.bookNumber <= 100
 });
 console.log(everyNumber);
+
+const footBallers = [
+  {name: "lionel andres messi", ovrRating: 120},
+  {name: "cristiano ronaldo", ovrRating: 119},
+  {name: "neymar junior", ovrRating: 119},
+  {name: "sergio ramos", ovrRating: 118}
+];
+ const sumUpOvrRating = footBallers.reduce((rating,sum) => {
+  return rating + sum.ovrRating
+ }, 0);
+console.log(sumUpOvrRating)
