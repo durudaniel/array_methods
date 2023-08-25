@@ -325,7 +325,7 @@ const library = [
   { bookName: "hooked", bookNumber: 6 },
 ];
 const totalise = library.reduce((sum, total) => {
-  return sum + total.bookName;
+  return sum + total.bookNumber;
 }, 0);
 console.log(totalise);
 const everyNumber = library.every((num) => {
@@ -343,3 +343,16 @@ const footBallers = [
   return rating + sum.ovrRating
  }, 0);
 console.log(sumUpOvrRating)
+
+const carUpdate = [
+  {type: "bMW",model: "bMW2OY21",modelYear: 2020},
+  {type: "mercedes",model: "AVRT G90",modelYear: 2020},
+  {type: "mercedes",model: "4MATIC",modelYear: 2017},
+  {type: "FORD",model: "FD20Y15",modelYear: 2015},
+  {type: "Tesla",model: "tes20El22", modelYear: 2022}
+];
+
+const updatedCars = carUpdate.filter((New) => {
+  return New.modelYear >= 2018
+});
+console.log(updatedCars)
