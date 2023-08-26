@@ -329,30 +329,40 @@ const totalise = library.reduce((sum, total) => {
 }, 0);
 console.log(totalise);
 const everyNumber = library.every((num) => {
-  return num.bookNumber <= 100
+  return num.bookNumber <= 100;
 });
 console.log(everyNumber);
 
 const footBallers = [
-  {name: "lionel andres messi", ovrRating: 120},
-  {name: "cristiano ronaldo", ovrRating: 119},
-  {name: "neymar junior", ovrRating: 119},
-  {name: "sergio ramos", ovrRating: 118}
+  { name: "lionel andres messi", ovrRating: 120 },
+  { name: "cristiano ronaldo", ovrRating: 119 },
+  { name: "neymar junior", ovrRating: 119 },
+  { name: "sergio ramos", ovrRating: 118 },
 ];
- const sumUpOvrRating = footBallers.reduce((rating,sum) => {
-  return rating + sum.ovrRating
- }, 0);
-console.log(sumUpOvrRating)
+const sumUpOvrRating = footBallers.reduce((rating, sum) => {
+  return rating + sum.ovrRating;
+}, 0);
+console.log(sumUpOvrRating);
 
 const carUpdate = [
-  {type: "bMW",model: "bMW2OY21",modelYear: 2020},
-  {type: "mercedes",model: "AVRT G90",modelYear: 2020},
-  {type: "mercedes",model: "4MATIC",modelYear: 2017},
-  {type: "FORD",model: "FD20Y15",modelYear: 2015},
-  {type: "Tesla",model: "tes20El22", modelYear: 2022}
+  { type: "bMW", model: "bMW2OY21", modelYear: 2020 },
+  { type: "mercedes", model: "AVRT G90", modelYear: 2020 },
+  { type: "mercedes", model: "4MATIC", modelYear: 2017 },
+  { type: "FORD", model: "FD20Y15", modelYear: 2015 },
+  { type: "Tesla", model: "tes20El22", modelYear: 2022 },
 ];
 
 const updatedCars = carUpdate.filter((New) => {
-  return New.modelYear >= 2018
+  return New.modelYear >= 2018;
 });
-console.log(updatedCars)
+console.log(updatedCars);
+
+const animalClass = {
+  name: "lion",
+  family: "cats family",
+  characteristics: "mammalia",
+};
+const { name, family, characteristics } = animalClass;
+console.log(name);
+console.log(family);
+console.log(characteristics);
