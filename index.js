@@ -366,3 +366,14 @@ const { name, family, characteristics } = animalClass;
 console.log(name);
 console.log(family);
 console.log(characteristics);
+
+const myObject = {
+  firstName: "daniel",
+  surname: "duru",
+  lastName: "chiemela",
+}
+
+const lastObject = Object.create(myObject)
+console.log(lastObject.surname)
+console.log(lastObject.lastName)
+console.log(lastObject.firstName)
