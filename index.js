@@ -377,3 +377,13 @@ const lastObject = Object.create(myObject)
 console.log(lastObject.surname)
 console.log(lastObject.lastName)
 console.log(lastObject.firstName)
+
+const regularExpression = new RegExp("my name is daniel");
+console.log(regularExpression);
+const regularExpression1 = /my name is daniel/
+if (regularExpression == regularExpression1){
+  console.log(true);
+} else{
+  console.log(false)
+}
+console.log(regularExpression1)
