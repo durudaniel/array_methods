@@ -206,9 +206,9 @@ const deadPrint = dead_list
 const fruit = "Apple";
 for (i in fruit) {
   if ("A" === fruit[i]) {
-    console.log(`A is a letter in ${fruit}`);
+    //console.log(`A is a letter in ${fruit}`);
   } else {
-    console.log(`A is not a letter in ${fruit}`);
+    //console.log(`A is not a letter in ${fruit}`);
   }
   break;
 }
@@ -249,7 +249,7 @@ const plate = [
 ];
 for (i = 0; i < cake.length; i++) {
   for (h = 0; h < plate.length; h++) {
-    console.log(`cake${cake[h]} in ${plate[h]} is served`);
+    //console.log(`cake${cake[h]} in ${plate[h]} is served`);
   }
   break;
 }
@@ -270,7 +270,7 @@ const budget = [
 const expenses = budget.reduce((sum, income, hit, sup) => {
   return sum + income.monthlyExpenses;
 }, 0);
-console.log(`the sum total of the users ependiture is: ${expenses}`);
+//console.log(`the sum total of the users ependiture is: ${expenses}`);
 
 const students_name = ["daniel", "peter", "sammy"];
 const score = [21, 43, 67];
@@ -283,7 +283,7 @@ for (i = 0; i < students_name.length; i++) {
 
 const pets = ["dog", "cats", "fish", "rat"];
 const rearable = pets.includes("fish");
-console.log(rearable);
+
 
 const foot_wears = [
   { type: "cover shoes", amount: 200, number: 3 },
@@ -311,12 +311,11 @@ const animal = [
 let youngOnes = ["cub", "pup", "calf", "foal"];
 
 const getSome = youngOnes.some((result, hub, tit) => {
-  console.log(result);
+  /*console.log(result);
   console.log(tit);
-  console.log(hub);
-  return result === "pup" || result === "cub";
+  console.log(hub);*/
+  return result === "pup" && "cub" && "calf"
 });
-console.log(getSome);
 
 const library = [
   { bookName: "my life as a fairy", bookNumber: 4 },
@@ -331,7 +330,7 @@ console.log(totalise);
 const everyNumber = library.every((num) => {
   return num.bookNumber <= 100;
 });
-console.log(everyNumber);
+
 
 const footBallers = [
   { name: "lionel andres messi", ovrRating: 120 },
@@ -342,7 +341,7 @@ const footBallers = [
 const sumUpOvrRating = footBallers.reduce((rating, sum) => {
   return rating + sum.ovrRating;
 }, 0);
-console.log(sumUpOvrRating);
+
 
 const carUpdate = [
   { type: "bMW", model: "bMW2OY21", modelYear: 2020 },
@@ -355,7 +354,7 @@ const carUpdate = [
 const updatedCars = carUpdate.filter((New) => {
   return New.modelYear >= 2018;
 });
-console.log(updatedCars);
+
 
 const animalClass = {
   name: "lion",
@@ -363,9 +362,7 @@ const animalClass = {
   characteristics: "mammalia",
 };
 const { name, family, characteristics } = animalClass;
-console.log(name);
-console.log(family);
-console.log(characteristics);
+
 
 const myObject = {
   firstName: "daniel",
@@ -374,16 +371,12 @@ const myObject = {
 }
 
 const lastObject = Object.create(myObject)
-console.log(lastObject.surname)
-console.log(lastObject.lastName)
-console.log(lastObject.firstName)
+
 
 const regularExpression = new RegExp("my name is daniel");
-console.log(regularExpression);
+
 const regularExpression1 = /my name is daniel/
-if (regularExpression == regularExpression1){
-  console.log(true);
-} else{
-  console.log(false)
-}
-console.log(regularExpression1)
+
+const greetingExpression = /hello. good morning /
+const nameExpression = /chemmzy/
+console.log(greetingExpression + nameExpression)
