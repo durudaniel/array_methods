@@ -284,7 +284,6 @@ for (i = 0; i < students_name.length; i++) {
 const pets = ["dog", "cats", "fish", "rat"];
 const rearable = pets.includes("fish");
 
-
 const foot_wears = [
   { type: "cover shoes", amount: 200, number: 3 },
   { type: "sandals", amount: 110, number: 8 },
@@ -314,7 +313,7 @@ const getSome = youngOnes.some((result, hub, tit) => {
   /*console.log(result);
   console.log(tit);
   console.log(hub);*/
-  return result === "pup" && "cub" && "calf"
+  return result === "pup" && "cub" && "calf";
 });
 
 const library = [
@@ -331,7 +330,6 @@ const everyNumber = library.every((num) => {
   return num.bookNumber <= 100;
 });
 
-
 const footBallers = [
   { name: "lionel andres messi", ovrRating: 120 },
   { name: "cristiano ronaldo", ovrRating: 119 },
@@ -341,7 +339,6 @@ const footBallers = [
 const sumUpOvrRating = footBallers.reduce((rating, sum) => {
   return rating + sum.ovrRating;
 }, 0);
-
 
 const carUpdate = [
   { type: "bMW", model: "bMW2OY21", modelYear: 2020 },
@@ -355,7 +352,6 @@ const updatedCars = carUpdate.filter((New) => {
   return New.modelYear >= 2018;
 });
 
-
 const animalClass = {
   name: "lion",
   family: "cats family",
@@ -363,20 +359,59 @@ const animalClass = {
 };
 const { name, family, characteristics } = animalClass;
 
-
 const myObject = {
   firstName: "daniel",
   surname: "duru",
   lastName: "chiemela",
-}
+};
 
-const lastObject = Object.create(myObject)
-
+const lastObject = Object.create(myObject);
 
 const regularExpression = new RegExp("my name is daniel");
 
-const regularExpression1 = /my name is daniel/
+const regularExpression1 = /my name is daniel/;
 
-const greetingExpression = /hello. good morning /
-const nameExpression = /chemmzy/
-console.log(greetingExpression + nameExpression)
+const greetingExpression = /hello. good morning /;
+const nameExpression = /chemmzy/;
+console.log(greetingExpression + nameExpression);
+
+//Class Declaration
+class Car {
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+  outPut() {
+    console.log(`${this.make} ${this.model} (${this.year})`);
+  }
+}
+const myCar = new Car("mercedes", "4Matic", 2014);
+myCar.outPut();
+console.log(myCar);
+
+class SportsCar extends Car {
+  print() {
+    console.log(`${this.make} goes faster and vroom`);
+  }
+}
+const mySportsCar = new SportsCar("mercedes", "AVRT G90", 2021);
+mySportsCar.print();
+console.log(mySportsCar);
+/*on "let" Class Declarattion
+let car = class{
+
+}*/
+
+function Cars(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const myCarName = new Cars("BMW", "Fi789l", 2020);
+console.log(myCarName);
+
+let programmerName = ["alex","ferdinard","david","michael"]
+programmerName.map((name) => {
+  console.log(`hello programmer ${name}!`)
+});
