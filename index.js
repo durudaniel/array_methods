@@ -415,3 +415,19 @@ let programmerName = ["alex","ferdinard","david","michael"]
 programmerName.map((name) => {
   console.log(`hello programmer ${name}!`)
 });
+
+class ClassToOrdained{
+  constructor(classPrefect,classAssitant,rullingAge){
+    this.classPrefect = classPrefect;
+    this.rullingAge = rullingAge;
+    this.classAssitant = classAssitant;
+
+  }
+  remark(){
+    return `${this.classPrefect} and ${this.classAssitant} has the rulling power for
+${this.rullingAge} years`
+  }
+}
+const nameOfOrdained = new ClassToOrdained("Rachell","Bentley",3);
+console.log(nameOfOrdained.remark())
+console.log(nameOfOrdained)
