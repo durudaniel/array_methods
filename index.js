@@ -425,9 +425,21 @@ class ClassToOrdained{
   }
   remark(){
     return `${this.classPrefect} and ${this.classAssitant} has the rulling power for
-${this.rullingAge} years`
+${this.rullinAge} years`
   }
 }
 const nameOfOrdained = new ClassToOrdained("Rachell","Bentley",3);
 console.log(nameOfOrdained.remark())
 console.log(nameOfOrdained)
+
+
+function PlayerDetail(name,club,country,league,age){
+  this.name = name
+  this.club = club;
+  this.country = country;
+  this.league = league;
+  this.age = age;
+}
+console.log(new PlayerDetail("kylian mbappe","PSG","france","ligue 1",28));
+console.log(new PlayerDetail("lionel andres messi","inter miami","argentina","MLS league",34));
+console.log(new PlayerDetail("junior neymar","al-hital","brazil","Arabian League",30));
