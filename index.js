@@ -231,7 +231,7 @@ const result = users.find((user) => {
 const forIndex = users.findIndex((index) => {
   return index.user_name === "Ferouz michael";
 });
-
+console.log(forIndex);
 // create a javascript array containing numbers [45,7,6,8,0,2] and get 0 from there
 
 const numArr = [45, 7, 6, 8, 0, 2];
@@ -411,35 +411,72 @@ function Cars(make, model, year) {
 const myCarName = new Cars("BMW", "Fi789l", 2020);
 console.log(myCarName);
 
-let programmerName = ["alex","ferdinard","david","michael"]
+let programmerName = ["alex", "ferdinard", "david", "michael"];
 programmerName.map((name) => {
-  console.log(`hello programmer ${name}!`)
+  console.log(`hello programmer ${name}!`);
 });
 
-class ClassToOrdained{
-  constructor(classPrefect,classAssitant,rullingAge){
+class ClassToOrdained {
+  constructor(classPrefect, classAssitant, rullingAge) {
     this.classPrefect = classPrefect;
     this.rullingAge = rullingAge;
     this.classAssitant = classAssitant;
-
   }
-  remark(){
+  remark() {
     return `${this.classPrefect} and ${this.classAssitant} has the rulling power for
-${this.rullinAge} years`
+${this.rullinAge} years`;
   }
 }
-const nameOfOrdained = new ClassToOrdained("Rachell","Bentley",3);
-console.log(nameOfOrdained.remark())
-console.log(nameOfOrdained)
+const nameOfOrdained = new ClassToOrdained("Rachell", "Bentley", 3);
+console.log(nameOfOrdained.remark());
+console.log(nameOfOrdained);
 
-
-function PlayerDetail(name,club,country,league,age){
-  this.name = name
+function PlayerDetail(name, club, country, league, age) {
+  this.name = name;
   this.club = club;
   this.country = country;
   this.league = league;
   this.age = age;
 }
-console.log(new PlayerDetail("kylian mbappe","PSG","france","ligue 1",28));
-console.log(new PlayerDetail("lionel andres messi","inter miami","argentina","MLS league",34));
-console.log(new PlayerDetail("junior neymar","al-hital","brazil","Arabian League",30));
+console.log(new PlayerDetail("kylian mbappe", "PSG", "france", "ligue 1", 28));
+console.log(
+  new PlayerDetail(
+    "lionel andres messi",
+    "inter miami",
+    "argentina",
+    "MLS league",
+    34
+  )
+);
+console.log(
+  new PlayerDetail("junior neymar", "al-hital", "brazil", "Arabian League", 30)
+);
+
+const names = ["david", "daniel", "paul", "emmanuel", "michael"];
+const others = ["sammy", "decks", "wolfghang", "duru", "bentley"];
+
+names.forEach((each) => {
+  console.log(`good day Mr. ${each}`);
+});
+
+const combine = names.concat(others);
+const findCombine = combine.findIndex((find) => {
+  return find === "wolfghang";
+});
+console.log(combine.join("~"));
+console.log(findCombine);
+console.log(combine);
+
+console.log(names.shift());
+console.log(names);
+console.log(others);
+console.log(others.reverse());
+
+const today = new Date();
+console.log(today);
+console.log(today.getDay());
+console.log(today.getMonth());
+console.log(today.getTime());
+
+
+/*string methods : trim,includes,EndsWith,startsWith,"split","slice",substr
