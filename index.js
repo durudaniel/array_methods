@@ -238,7 +238,7 @@ const numArr = [45, 7, 6, 8, 0, 2];
 const extract = numArr.find((pick) => {
   return pick === 45;
 });
-
+console.log(extract);
 const cake = [1, 2, 3, 4, 5];
 const plate = [
   "plate one",
@@ -309,7 +309,7 @@ const animal = [
 ];
 let youngOnes = ["cub", "pup", "calf", "foal"];
 
-const getSome = youngOnes.some((result, hub, tit) => {
+const getSome = youngOnes.some((result) => {
   /*console.log(result);
   console.log(tit);
   console.log(hub);*/
@@ -327,8 +327,9 @@ const totalise = library.reduce((sum, total) => {
 }, 0);
 console.log(totalise);
 const everyNumber = library.every((num) => {
-  return num.bookNumber <= 100;
+  return num.bookNumber >= 4;
 });
+console.log(everyNumber);
 
 const footBallers = [
   { name: "lionel andres messi", ovrRating: 120 },
@@ -438,6 +439,7 @@ function PlayerDetail(name, club, country, league, age) {
   this.league = league;
   this.age = age;
 }
+
 console.log(new PlayerDetail("kylian mbappe", "PSG", "france", "ligue 1", 28));
 console.log(
   new PlayerDetail(
@@ -478,5 +480,44 @@ console.log(today.getDay());
 console.log(today.getMonth());
 console.log(today.getTime());
 
+//string methods : trim,includes,EndsWith,startsWith,"split","slice",substr
 
-/*string methods : trim,includes,EndsWith,startsWith,"split","slice",substr
+const letCatch = 'let catch this "and throw an error"';
+console.log(letCatch);
+
+function afterTryingATryCatch() {
+  try {
+    let key = undefined;
+    console.log(key.h);
+    console.log('that code up there says "error"');
+  } catch (error) {
+    console.log("quick fix up\ 'expected\' " + error.message);
+  }
+
+  //console.log("this code is still running");
+}
+afterTryingATryCatch()
+/*
+function QuickChat(name,Email,password){
+  this.name = String(prompt(`user ${name}`));
+  this.Email = (prompt(`ùser ${Email}`));
+  this.password = Number(prompt(`user ${password}`));
+  this.refilling = function(){
+    try {
+      if(password !== Number){}
+
+    } catch (error) {
+      return "password should be a number"
+    }
+  }
+
+    try {
+    if(name != String){}
+   } catch (error) {
+    return "name must be in letter" 
+   }
+
+
+};
+const chatApp = new QuickChat("name","E-mail","password")
+console.log(chatApp.refilling())*/
