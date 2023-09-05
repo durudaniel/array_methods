@@ -521,3 +521,5 @@ function QuickChat(name,Email,password){
 };
 const chatApp = new QuickChat("name","E-mail","password")
 console.log(chatApp.refilling())*/
+const letter = "apple"
+console.log(letter.toLocaleUpperCase())
