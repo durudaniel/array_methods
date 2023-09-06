@@ -491,12 +491,12 @@ function afterTryingATryCatch() {
     console.log(key.h);
     console.log('that code up there says "error"');
   } catch (error) {
-    console.log("quick fix up\ 'expected\' " + error.message);
+    console.log("quick fix up 'expected' " + error.message);
   }
 
   //console.log("this code is still running");
 }
-afterTryingATryCatch()
+afterTryingATryCatch();
 /*
 function QuickChat(name,Email,password){
   this.name = String(prompt(`user ${name}`));
@@ -521,5 +521,43 @@ function QuickChat(name,Email,password){
 };
 const chatApp = new QuickChat("name","E-mail","password")
 console.log(chatApp.refilling())*/
-const letter = "apple"
-console.log(letter.toLocaleUpperCase())
+const letter = "apple";
+console.log(letter.toLocaleUpperCase());
+/*. Write a JavaScript program to add items to a blank array and display them.
+Sample Screen :
+add elements in an blank array
+ */
+
+//Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+
+// here you create global variable and an empty value
+const arrayNumber = [];
+const outPut = [];
+function removeDuplicates(num) {
+  //loop through parameter num
+  for (x = 0; x < num.length; x++) {
+    // add num index to an existing variable and assign a value to it
+    arrayNumber[num[x]] = 0;
+  }
+  // now loop through arrayNumber and push it to our "outPut" variable
+  for (i in arrayNumber) {
+    outPut.push(i);
+  }
+  return outPut
+}
+const duplicateNumbers = [1, 2, 2, 2, 1, 1, 4, 3, 6, 7, 5, 5, 5];
+console.log(removeDuplicates(duplicateNumbers));
+
+const arrayString = []
+const arrayToPushIn = []
+function deleteDuplicate(stringValue){
+  for(x = 0; x < stringValue.length; x++){
+    arrayString[stringValue[x]] = ""
+  }
+  for(i in arrayString){
+    arrayToPushIn.push(i)
+  }
+  return arrayToPushIn
+}
+const duplicateString = ["daniel","daniel","Daniel","remmy","silas","silas","Remmy"];
+console.log(deleteDuplicate(duplicateString).sort())
