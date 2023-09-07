@@ -561,3 +561,43 @@ function deleteDuplicate(stringValue){
 }
 const duplicateString = ["daniel","daniel","Daniel","remmy","silas","silas","Remmy"];
 console.log(deleteDuplicate(duplicateString).sort())
+/*Write a JavaScript program to display the colors in the following way.
+
+Here is the sample array:
+color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+o = ["th","st","nd","rd"]
+Output
+"1st choice is Blue ."
+"2nd choice is Green."
+"3rd choice is Red."
+- - - - - - - - - - - - -*/
+let colorNumber = 1
+function displayColor() {
+  const abbreviatedWords = ["th","nd","rd","st"]
+  const color = ["green","blue","red","orange"]
+  for(i = 0;i < color.length;i++){
+    for(x = 0; x < abbreviatedWords.length;x++){
+      const resultOfColors = `${colorNumber}${abbreviatedWords[x]} choice is ${color[x]}`
+      colorNumber++
+      console.log(resultOfColors)
+    }
+    break
+  }
+  
+  
+}
+
+displayColor()
+
+/*const colors = ["blue","red","green","orange"];
+const abbreviatedWords = ["st","nd","rd","th"];
+let colorNumber = 1
+
+for(i = 0;i < colors.length;i++){
+  for(x = 0; x < abbreviatedWords.length;x++){
+    const resultOfColors = `${colorNumber}${abbreviatedWords[x]} choice is ${colors[x]}`
+    colorNumber++
+    console.log(resultOfColors)
+  }
+  break;
+}*/
