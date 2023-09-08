@@ -601,3 +601,14 @@ for(i = 0;i < colors.length;i++){
   }
   break;
 }*/
+
+// Write a JavaScript program to find the sum of squares of a numerical vector.
+function sumNumericVectors(numerics){
+  const sumSquares = numerics.reduce((add,square) =>{
+     return add + square
+    
+  },0);
+  return sumSquares ** 2
+};
+console.log(sumNumericVectors([0,2,3,4,5]))
+
