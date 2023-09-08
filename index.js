@@ -612,3 +612,14 @@ function sumNumericVectors(numerics){
 };
 console.log(sumNumericVectors([0,2,3,4,5]))
 
+// Write a JavaScript program to find the leap years in a given range of years.
+function leapYear(years){
+  for(n = 0; n < years.length; n++){
+    if(years[n] % 4 === 0 && years[n] % 400 === 0){
+      return years[n]
+    }
+  }
+  return years
+}
+const seriesOfYear = [2000,2010,2015,2018]
+console.log(leapYear(seriesOfYear))
