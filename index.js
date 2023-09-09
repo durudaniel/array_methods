@@ -532,16 +532,18 @@ add elements in an blank array
 
 // here you create global variable and an empty value
 const arrayNumber = [];
-const outPut = [];
+let outPut = [];
 function removeDuplicates(num) {
   //loop through parameter num
   for (x = 0; x < num.length; x++) {
     // add num index to an existing variable and assign a value to it
-    arrayNumber[num[x]] = 0;
+    arrayNumber[num[x]] = 6;
   }
-  // now loop through arrayNumber and push it to our "outPut" variable
-  for (i in arrayNumber) {
-    outPut.push(i);
+  
+  // now loop through arrayNumber and push/unshift it to our "outPut" variable
+  for (i of arrayNumber) {
+    console.log(i)
+    outPut.push(i)
   }
   return outPut
 }
@@ -549,18 +551,18 @@ const duplicateNumbers = [1, 2, 2, 2, 1, 1, 4, 3, 6, 7, 5, 5, 5];
 console.log(removeDuplicates(duplicateNumbers));
 
 const arrayString = []
-const arrayToPushIn = []
+let arrayToPushIn = []
 function deleteDuplicate(stringValue){
   for(x = 0; x < stringValue.length; x++){
-    arrayString[stringValue[x]] = ""
+    arrayString[stringValue[x]] = 0
   }
   for(i in arrayString){
     arrayToPushIn.push(i)
   }
   return arrayToPushIn
 }
-const duplicateString = ["daniel","daniel","Daniel","remmy","silas","silas","Remmy"];
-console.log(deleteDuplicate(duplicateString).sort())
+const duplicateString = ["daniel","daniel","Daniel","Remmy","silas","silas","remmy"];
+console.log(deleteDuplicate(duplicateString))
 /*Write a JavaScript program to display the colors in the following way.
 
 Here is the sample array:
@@ -613,13 +615,57 @@ function sumNumericVectors(numerics){
 console.log(sumNumericVectors([0,2,3,4,5]))
 
 // Write a JavaScript program to find the leap years in a given range of years.
+
 function leapYear(years){
-  for(n = 0; n < years.length; n++){
-    if(years[n] % 4 === 0 && years[n] % 400 === 0){
-      return years[n]
-    }
-  }
-  return years
+  const arrayToPush = years.filter((year)=>{
+    return year % 4 === 0 || year % 400 === 0
+  })
+  return arrayToPush
 }
-const seriesOfYear = [2000,2010,2015,2018]
+const seriesOfYear = [2000,2010,2012,2015,2018]
 console.log(leapYear(seriesOfYear))
+
+/*function leap_year_range(st_year, end_year) {
+  var year_range = [];
+  for (var i = st_year; i <= end_year; i++)
+  {
+       year_range.push(i);
+  }
+  var new_array = [];
+
+year_range.forEach(
+function(year)
+{ 
+ if (test_LeapYear(year)) 
+ new_array.push(year);
+});
+
+return new_array;
+}
+
+function test_LeapYear(year) {
+if ((year % 4 === 0 && year % 100 !== 0) || (year % 100 === 0 && year % 400 === 0)) {
+          return year;
+  } else {
+          return false;
+  }
+}
+console.log(leap_year_range(2000,2012));*/
+
+//Write a JavaScript program that takes an array of numbers and returns the third smallest number
+
+function test(arr_nums) 
+ {
+  
+  return arr_nums.sort((x,y) =>{
+   return y + x
+  }) [arr_nums.length - 3]
+}
+
+let nums = [2, 3, 5, 7, 1]
+console.log("Original array of numbers: "+nums)
+console.log("Third smallest number of the said array of numbers: "+test(nums));
+nums = [2, 3, 0, 5, 7, 8, -2, -4]
+console.log("Original array of numbers: "+nums)
+console.log("Third smallest number of the said array of numbers: "+test(nums));
+
