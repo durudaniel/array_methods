@@ -360,22 +360,6 @@ const animalClass = {
 };
 const { name, family, characteristics } = animalClass;
 
-const myObject = {
-  firstName: "daniel",
-  surname: "duru",
-  lastName: "chiemela",
-};
-
-const lastObject = Object.create(myObject);
-
-const regularExpression = new RegExp("my name is daniel");
-
-const regularExpression1 = /my name is daniel/;
-
-const greetingExpression = /hello. good morning /;
-const nameExpression = /chemmzy/;
-console.log(greetingExpression + nameExpression);
-
 //Class Declaration
 class Car {
   constructor(make, model, year) {
@@ -457,9 +441,12 @@ console.log(
 const names = ["david", "daniel", "paul", "emmanuel", "michael"];
 const others = ["sammy", "decks", "wolfghang", "duru", "bentley"];
 
-names.forEach((each) => {
-  console.log(`good day Mr. ${each}`);
-});
+const arrayOfNumbers = [2,3,4,5,6]
+const resultArrays = arrayOfNumbers.reduce((each,num) => {
+  console.log(each)
+  return each + num
+},null);
+console.log({resultArrays})
 
 const combine = names.concat(others);
 const findCombine = combine.findIndex((find) => {
@@ -612,7 +599,6 @@ function sumNumericVectors(numerics){
   },0);
   return sumSquares ** 2
 };
-console.log(sumNumericVectors([0,2,3,4,5]))
 
 // Write a JavaScript program to find the leap years in a given range of years.
 
@@ -623,7 +609,6 @@ function leapYear(years){
   return arrayToPush
 }
 const seriesOfYear = [2000,2010,2012,2015,2018]
-console.log(leapYear(seriesOfYear))
 
 /*function leap_year_range(st_year, end_year) {
   var year_range = [];
@@ -658,14 +643,24 @@ function test(arr_nums)
  {
   
   return arr_nums.sort((x,y) =>{
-   return y + x
+   return y - x
   }) [arr_nums.length - 3]
 }
 
 let nums = [2, 3, 5, 7, 1]
-console.log("Original array of numbers: "+nums)
-console.log("Third smallest number of the said array of numbers: "+test(nums));
+
 nums = [2, 3, 0, 5, 7, 8, -2, -4]
-console.log("Original array of numbers: "+nums)
-console.log("Third smallest number of the said array of numbers: "+test(nums));
+
+
+function filterArray(filterate){
+
+  return filterate.filter((data)=>{
+    const dataTypes = typeof data 
+    console.log(dataTypes)
+    return dataTypes === "number"
+  })
+  
+}
+console.log(filterArray([1, 2, "a", "b"]) ) 
+
 
