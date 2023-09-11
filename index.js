@@ -397,9 +397,10 @@ const myCarName = new Cars("BMW", "Fi789l", 2020);
 console.log(myCarName);
 
 let programmerName = ["alex", "ferdinard", "david", "michael"];
-programmerName.map((name) => {
-  console.log(`hello programmer ${name}!`);
+const print = programmerName.forEach((name) => {
+  return "hello programmer" + name + "!" 
 });
+console.log(print)
 
 class ClassToOrdained {
   constructor(classPrefect, classAssitant, rullingAge) {
@@ -409,12 +410,12 @@ class ClassToOrdained {
   }
   remark() {
     return `${this.classPrefect} and ${this.classAssitant} has the rulling power for
-${this.rullinAge} years`;
+${this.rullingAge} years`;
   }
 }
 const nameOfOrdained = new ClassToOrdained("Rachell", "Bentley", 3);
-console.log(nameOfOrdained.remark());
-console.log(nameOfOrdained);
+//console.log(nameOfOrdained.remark());
+
 
 function PlayerDetail(name, club, country, league, age) {
   this.name = name;
@@ -424,19 +425,8 @@ function PlayerDetail(name, club, country, league, age) {
   this.age = age;
 }
 
-console.log(new PlayerDetail("kylian mbappe", "PSG", "france", "ligue 1", 28));
-console.log(
-  new PlayerDetail(
-    "lionel andres messi",
-    "inter miami",
-    "argentina",
-    "MLS league",
-    34
-  )
-);
-console.log(
-  new PlayerDetail("junior neymar", "al-hital", "brazil", "Arabian League", 30)
-);
+
+
 
 const names = ["david", "daniel", "paul", "emmanuel", "michael"];
 const others = ["sammy", "decks", "wolfghang", "duru", "bentley"];
@@ -446,13 +436,13 @@ const resultArrays = arrayOfNumbers.reduce((each,num) => {
   console.log(each)
   return each + num
 },null);
-console.log({resultArrays})
+
 
 const combine = names.concat(others);
 const findCombine = combine.findIndex((find) => {
   return find === "wolfghang";
 });
-console.log(combine.join("~"));
+/*console.log(combine.join("~"));
 console.log(findCombine);
 console.log(combine);
 
@@ -466,24 +456,10 @@ console.log(today);
 console.log(today.getDay());
 console.log(today.getMonth());
 console.log(today.getTime());
-
+*/
 //string methods : trim,includes,EndsWith,startsWith,"split","slice",substr
 
-const letCatch = 'let catch this "and throw an error"';
-console.log(letCatch);
 
-function afterTryingATryCatch() {
-  try {
-    let key = undefined;
-    console.log(key.h);
-    console.log('that code up there says "error"');
-  } catch (error) {
-    console.log("quick fix up 'expected' " + error.message);
-  }
-
-  //console.log("this code is still running");
-}
-afterTryingATryCatch();
 /*
 function QuickChat(name,Email,password){
   this.name = String(prompt(`user ${name}`));
@@ -508,8 +484,7 @@ function QuickChat(name,Email,password){
 };
 const chatApp = new QuickChat("name","E-mail","password")
 console.log(chatApp.refilling())*/
-const letter = "apple";
-console.log(letter.toLocaleUpperCase());
+
 /*. Write a JavaScript program to add items to a blank array and display them.
 Sample Screen :
 add elements in an blank array
@@ -529,13 +504,12 @@ function removeDuplicates(num) {
   
   // now loop through arrayNumber and push/unshift it to our "outPut" variable
   for (i of arrayNumber) {
-    console.log(i)
     outPut.push(i)
   }
   return outPut
 }
 const duplicateNumbers = [1, 2, 2, 2, 1, 1, 4, 3, 6, 7, 5, 5, 5];
-console.log(removeDuplicates(duplicateNumbers));
+
 
 const arrayString = []
 let arrayToPushIn = []
@@ -549,7 +523,7 @@ function deleteDuplicate(stringValue){
   return arrayToPushIn
 }
 const duplicateString = ["daniel","daniel","Daniel","Remmy","silas","silas","remmy"];
-console.log(deleteDuplicate(duplicateString))
+
 /*Write a JavaScript program to display the colors in the following way.
 
 Here is the sample array:
@@ -656,11 +630,20 @@ function filterArray(filterate){
 
   return filterate.filter((data)=>{
     const dataTypes = typeof data 
-    console.log(dataTypes)
+    //console.log(dataTypes)
     return dataTypes === "number"
   })
   
 }
-console.log(filterArray([1, 2, "a", "b"]) ) 
+console.log(filterArray([1, 2, "a", "b"]))
 
-
+function battingAvg(arr) {
+	let hits = 0
+  let batAverage = 0 
+  arr.forEach((value) =>{
+    hits += value[0]
+    batAverage += value[1]
+  })
+  return (hits / batAverage).toFixed(5).slice(1)
+}
+console.log(battingAvg([[2, 3, 4], [1, 5, 6], [2, 4, 6], [1, 5, 6], [0, 5, 4]]) )
