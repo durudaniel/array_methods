@@ -660,28 +660,14 @@ console.log(numberSplit(11))
 
 console.log(numberSplit(-9) )
 
-function sortByLength(arrayString){
+function sortBylength(arrayString){
   return arrayString.sort((value1,value2)=>{
     if(value1.length < value2.length)
     return -1
-   if(value2.length < value1.length || value1.length > value2.length)
+    if(value1.length > value2.length)
     return 1
-  return 0
-    
-  })
- 
-}
-console.log(sortByLength(["a", "ccc", "dddd", "bb"]))
-console.log(sortByLength(["apple", "pie", "shortcake"]))
-console.log(sortByLength(["may", "april", "september", "august"]))
-
-function sumOfCubes(cubes){
-  return cubes.reduce((value,index) => {
-    return value + Math.pow(index,3)
+    return 0
   })
 }
-console.log(sumOfCubes([3, 4, 5]))
+console.log(sortBylength(["a","gregor","win","tray"]))
 
-console.log(sumOfCubes([2]))
-
-console.log([])
