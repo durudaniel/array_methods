@@ -627,7 +627,7 @@ nums = [2, 3, 0, 5, 7, 8, -2, -4]
 
 
 function filterArray(filterate){
-
+Number.isFinite
   return filterate.filter((data)=>{
     const dataTypes = typeof data 
     //console.log(dataTypes)
@@ -646,4 +646,42 @@ function battingAvg(arr) {
   })
   return (hits / batAverage).toFixed(5).slice(1)
 }
-console.log(battingAvg([[2, 3, 4], [1, 5, 6], [2, 4, 6], [1, 5, 6], [0, 5, 4]]) )
+console.log(battingAvg([[2, 3, 4]]) )
+
+function numberSplit(split){
+  return [Math.floor(split / 2),Math.ceil(split / 2)]
+}
+
+console.log(numberSplit(4)) 
+
+console.log(numberSplit(10)) 
+
+console.log(numberSplit(11))
+
+console.log(numberSplit(-9) )
+
+function sortByLength(arrayString){
+  return arrayString.sort((value1,value2)=>{
+    if(value1.length < value2.length)
+    return -1
+   if(value2.length < value1.length || value1.length > value2.length)
+    return 1
+  return 0
+    
+  })
+ 
+}
+console.log(sortByLength(["a", "ccc", "dddd", "bb"]))
+console.log(sortByLength(["apple", "pie", "shortcake"]))
+console.log(sortByLength(["may", "april", "september", "august"]))
+
+function sumOfCubes(cubes){
+  return cubes.reduce((value,index) => {
+    return value + Math.pow(index,3)
+  })
+}
+console.log(sumOfCubes([3, 4, 5]))
+
+console.log(sumOfCubes([2]))
+
+console.log([])
