@@ -671,3 +671,10 @@ function sortBylength(arrayString){
 }
 console.log(sortBylength(["a","gregor","win","tray"]))
 
+function sumOfCube(cubes){
+  return cubes.reduce((value,index)=>{
+    return value + Math.pow(index,3)
+  })
+}
+console.log(sumOfCube([2,3,4,7,8]))
+
