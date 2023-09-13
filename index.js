@@ -499,7 +499,7 @@ function removeDuplicates(num) {
   //loop through parameter num
   for (x = 0; x < num.length; x++) {
     // add num index to an existing variable and assign a value to it
-    arrayNumber[num[x]] = 6;
+     arrayNumber[num[x]] === 1;
   }
   
   // now loop through arrayNumber and push/unshift it to our "outPut" variable
@@ -509,7 +509,7 @@ function removeDuplicates(num) {
   return outPut
 }
 const duplicateNumbers = [1, 2, 2, 2, 1, 1, 4, 3, 6, 7, 5, 5, 5];
-
+console.log(duplicateNumbers)
 
 const arrayString = []
 let arrayToPushIn = []
@@ -518,11 +518,13 @@ function deleteDuplicate(stringValue){
     arrayString[stringValue[x]] = 0
   }
   for(i in arrayString){
+    if(arrayString[i] >= 2)
     arrayToPushIn.push(i)
   }
   return arrayToPushIn
 }
 const duplicateString = ["daniel","daniel","Daniel","Remmy","silas","silas","remmy"];
+console.log(duplicateString)
 
 /*Write a JavaScript program to display the colors in the following way.
 
@@ -678,3 +680,14 @@ function sumOfCube(cubes){
 }
 console.log(sumOfCube([2,3,4,7,8]))
 
+
+function getOnlyEvens(evenNumbers){
+  return evenNumbers.filter((even,indices)=>{
+    return even % 2 === 0 && indices % 2 === 0
+  })
+}
+console.log(getOnlyEvens([1, 3, 2, 6, 4, 8]))
+
+console.log(getOnlyEvens([0, 1, 2, 3, 4]))
+
+console.log(getOnlyEvens([1, 2, 3, 4, 5]))
