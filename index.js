@@ -493,23 +493,23 @@ add elements in an blank array
 //Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
 
 // here you create global variable and an empty value
-const arrayNumber = [];
+let arrayNumber = {};
 let outPut = [];
 function removeDuplicates(num) {
+
   //loop through parameter num
   for (x = 0; x < num.length; x++) {
     // add num index to an existing variable and assign a value to it
-     arrayNumber[num[x]] === 1;
+     arrayNumber[num[x]] = 0;
   }
   
   // now loop through arrayNumber and push/unshift it to our "outPut" variable
-  for (i of arrayNumber) {
+  for (i in arrayNumber) {
     outPut.push(i)
   }
   return outPut
 }
 const duplicateNumbers = [1, 2, 2, 2, 1, 1, 4, 3, 6, 7, 5, 5, 5];
-console.log(duplicateNumbers)
 
 const arrayString = []
 let arrayToPushIn = []
@@ -518,13 +518,12 @@ function deleteDuplicate(stringValue){
     arrayString[stringValue[x]] = 0
   }
   for(i in arrayString){
-    if(arrayString[i] >= 2)
     arrayToPushIn.push(i)
   }
   return arrayToPushIn
 }
 const duplicateString = ["daniel","daniel","Daniel","Remmy","silas","silas","remmy"];
-console.log(duplicateString)
+
 
 /*Write a JavaScript program to display the colors in the following way.
 
@@ -546,7 +545,7 @@ function displayColor() {
       colorNumber++
       console.log(resultOfColors)
     }
-    break
+  
   }
   
   
@@ -575,6 +574,7 @@ function sumNumericVectors(numerics){
   },0);
   return sumSquares ** 2
 };
+console.log(sumNumericVectors([3,4,5,6,7]))
 
 // Write a JavaScript program to find the leap years in a given range of years.
 
@@ -629,7 +629,6 @@ nums = [2, 3, 0, 5, 7, 8, -2, -4]
 
 
 function filterArray(filterate){
-Number.isFinite
   return filterate.filter((data)=>{
     const dataTypes = typeof data 
     //console.log(dataTypes)
@@ -676,7 +675,8 @@ console.log(sortBylength(["a","gregor","win","tray"]))
 function sumOfCube(cubes){
   return cubes.reduce((value,index)=>{
     return value + Math.pow(index,3)
-  })
+  },0)
+  
 }
 console.log(sumOfCube([2,3,4,7,8]))
 
@@ -691,3 +691,55 @@ console.log(getOnlyEvens([1, 3, 2, 6, 4, 8]))
 console.log(getOnlyEvens([0, 1, 2, 3, 4]))
 
 console.log(getOnlyEvens([1, 2, 3, 4, 5]))
+
+
+
+function getFirstValue(array){
+  return array[0]
+}
+console.log(getFirstValue([32,45,46]))
+
+console.log(getFirstValue([1, 2, 3]))
+
+console.log(getFirstValue([80, 5, 100]))
+
+console.log(getFirstValue([-500, 0, 50]))
+
+function sortNumsAscending (nums){
+  if(nums === null){
+    return []
+  }
+  return nums.sort((int,num)=>{
+    if(int < num)
+    return int - num
+    
+  }) 
+  
+  
+  
+}
+console.log(sortNumsAscending([1,3,4,6,10,2,5,7,8,9]))
+
+console.log(sortNumsAscending([1, 2, 10, 50, 5])) // ➞ [1, 2, 5, 10, 50]
+
+console.log(sortNumsAscending([80, 29, 4, -95, -24, 85])) //➞ [-95, -24, 4, 29, 80, 85]
+
+console.log(sortNumsAscending(null)) //➞ []
+
+console.log(sortNumsAscending([])) // ➞ []
+
+let arrayLength;
+function isAvgWhole(avegarray){
+  return Number.isInteger(avegarray.reduce((value,index)=>{
+   return  value + index 
+  }) / avegarray.length)
+}
+console.log(isAvgWhole([1, 3]) )// ➞ true
+
+console.log(isAvgWhole([1, 2, 3, 4])) //➞ false
+
+console.log(isAvgWhole([1, 5, 6])) //➞ true
+
+console.log(isAvgWhole([1, 1, 1])) //➞ true
+
+console.log(isAvgWhole([9, 2, 2, 5])) //➞ false
