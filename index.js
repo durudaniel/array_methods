@@ -728,18 +728,17 @@ console.log(sortNumsAscending(null)) //➞ []
 
 console.log(sortNumsAscending([])) // ➞ []
 
-let arrayLength;
-function isAvgWhole(avegarray){
-  return Number.isInteger(avegarray.reduce((value,index)=>{
-   return  value + index 
-  }) / avegarray.length)
+function isAvgWhole(arrayValue){
+  return Number.isInteger(arrayValue.reduce((value,average)=>{
+    return value + average
+  })/ arrayValue.length)
 }
-console.log(isAvgWhole([1, 3]) )// ➞ true
+console.log(isAvgWhole([1, 3]))
 
-console.log(isAvgWhole([1, 2, 3, 4])) //➞ false
+console.log(isAvgWhole([1, 2, 3, 4]))
 
-console.log(isAvgWhole([1, 5, 6])) //➞ true
+console.log(isAvgWhole([1, 5, 6]))
 
-console.log(isAvgWhole([1, 1, 1])) //➞ true
+console.log(isAvgWhole([1, 1, 1]))
 
-console.log(isAvgWhole([9, 2, 2, 5])) //➞ false
+console.log(isAvgWhole([9, 2, 2, 5]))
