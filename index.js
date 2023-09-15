@@ -41,7 +41,8 @@ countryAndStateMap.set("Ken", "U.S.A");
 countryAndStateMap.set("Gulie", "U.S.A");
 countryAndStateMap.set("Blanka", "Brazil");
 
-for (var value of countryAndStateMap.values()) {
+for (var value of countryAndStateMap.keys()) {
+  console.log(value)
 }
 for (var [keys, values] of countryAndStateMap.entries()) {
 }
@@ -720,18 +721,23 @@ function sortNumsAscending (nums){
 }
 console.log(sortNumsAscending([1,3,4,6,10,2,5,7,8,9]))
 
-console.log(sortNumsAscending([1, 2, 10, 50, 5])) // ➞ [1, 2, 5, 10, 50]
+console.log(sortNumsAscending([1, 2, 10, 50, 5])) 
 
-console.log(sortNumsAscending([80, 29, 4, -95, -24, 85])) //➞ [-95, -24, 4, 29, 80, 85]
+console.log(sortNumsAscending([80, 29, 4, -95, -24, 85])) 
 
-console.log(sortNumsAscending(null)) //➞ []
+console.log(sortNumsAscending(null)) 
 
-console.log(sortNumsAscending([])) // ➞ []
-
+console.log(sortNumsAscending([])) 
 function isAvgWhole(arrayValue){
-  return Number.isInteger(arrayValue.reduce((value,average)=>{
-    return value + average
-  })/ arrayValue.length)
+  const arrayResult = arrayValue.reduce((value,index)=>{
+   return value + index
+
+  },0)
+  if(arrayResult % arrayValue.length === 0){
+    return true
+  } else{
+    return false
+  }
 }
 console.log(isAvgWhole([1, 3]))
 
@@ -742,3 +748,64 @@ console.log(isAvgWhole([1, 5, 6]))
 console.log(isAvgWhole([1, 1, 1]))
 
 console.log(isAvgWhole([9, 2, 2, 5]))
+
+// write a javascript to get the even value and indices in an array 
+function getEvenValue(evenValue){
+  if(evenValue === null)
+  return []
+  return evenValue.filter((value,index)=>{
+    return value % 2 === 0 && index % 2 === 0
+  })
+}
+
+console.log(getEvenValue([0,3,7,8,10,9,16]))
+console.log(getEvenValue(null))
+
+
+function splitValue(toSplit){
+  return [Math.floor(toSplit / 2), Math.ceil(toSplit / 2)]
+}
+
+console.log(splitValue(16))
+
+function calculateDifference(item,limit){
+  let sum = 0
+  for (let key in item){
+    sum += item[key]
+  }
+  return sum - limit
+}
+
+console.log(calculateDifference({ "baseball bat": 20 }, 5))
+
+console.log(calculateDifference({ skate: 10, painting: 20 }, 19)) 
+
+console.log(calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400))
+
+function getAbsSum(numbers){
+  let sum = 0
+  for(i in numbers){
+    if(numbers[i] < 0){
+      sum += numbers[i] * -1
+      continue
+    }
+    sum += numbers[i]
+  }
+  return sum
+}
+
+        //OR
+function getAbsSum1(numbers){
+  return numbers.reduce((num,absoluteValue)=>{
+    return num + Math.abs(absoluteValue)
+  },0)
+}
+console.log(getAbsSum1([2, -1, 4, 8, 10])) // 25
+
+//console.log(getAbsSum([-3, -4, -10, -2, -3])) //22
+
+//console.log(getAbsSum([2, 4, 6, 8, 10]) ) // 30
+
+console.log(getAbsSum1([-1])) // 1
+
+console.log(getAbsSum([500]))
