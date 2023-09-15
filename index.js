@@ -326,11 +326,12 @@ const library = [
 const totalise = library.reduce((sum, total) => {
   return sum + total.bookNumber;
 }, 0);
-console.log(totalise);
+
+
 const everyNumber = library.every((num) => {
   return num.bookNumber >= 4;
 });
-console.log(everyNumber);
+//console.log(everyNumber);
 
 const footBallers = [
   { name: "lionel andres messi", ovrRating: 120 },
@@ -369,21 +370,21 @@ class Car {
     this.year = year;
   }
   outPut() {
-    console.log(`${this.make} ${this.model} (${this.year})`);
+    //console.log(`${this.make} ${this.model} (${this.year})`);
   }
 }
 const myCar = new Car("mercedes", "4Matic", 2014);
 myCar.outPut();
-console.log(myCar);
+//console.log(myCar);
 
 class SportsCar extends Car {
   print() {
-    console.log(`${this.make} goes faster and vroom`);
+    //console.log(`${this.make} goes faster and vroom`);
   }
 }
 const mySportsCar = new SportsCar("mercedes", "AVRT G90", 2021);
 mySportsCar.print();
-console.log(mySportsCar);
+//console.log(mySportsCar);
 /*on "let" Class Declarattion
 let car = class{
 
@@ -395,13 +396,6 @@ function Cars(make, model, year) {
   this.year = year;
 }
 const myCarName = new Cars("BMW", "Fi789l", 2020);
-console.log(myCarName);
-
-let programmerName = ["alex", "ferdinard", "david", "michael"];
-const print = programmerName.forEach((name) => {
-  return "hello programmer" + name + "!" 
-});
-console.log(print)
 
 class ClassToOrdained {
   constructor(classPrefect, classAssitant, rullingAge) {
@@ -434,7 +428,6 @@ const others = ["sammy", "decks", "wolfghang", "duru", "bentley"];
 
 const arrayOfNumbers = [2,3,4,5,6]
 const resultArrays = arrayOfNumbers.reduce((each,num) => {
-  console.log(each)
   return each + num
 },null);
 
@@ -538,15 +531,15 @@ Output
 - - - - - - - - - - - - -*/
 let colorNumber = 1
 function displayColor() {
-  const abbreviatedWords = ["th","nd","rd","st"]
+  const abbreviatedWords = ["st","nd","rd","th"]
   const color = ["green","blue","red","orange"]
   for(i = 0;i < color.length;i++){
     for(x = 0; x < abbreviatedWords.length;x++){
       const resultOfColors = `${colorNumber}${abbreviatedWords[x]} choice is ${color[x]}`
       colorNumber++
-      console.log(resultOfColors)
+      
     }
-  
+  break;
   }
   
   
@@ -570,12 +563,12 @@ for(i = 0;i < colors.length;i++){
 // Write a JavaScript program to find the sum of squares of a numerical vector.
 function sumNumericVectors(numerics){
   const sumSquares = numerics.reduce((add,square) =>{
-     return add + square
+     return add + Math.pow(square,2)
     
-  },0);
-  return sumSquares ** 2
+  },0)
+  return sumSquares
 };
-console.log(sumNumericVectors([3,4,5,6,7]))
+//console.log(sumNumericVectors([3,4,5,6,7]))
 
 // Write a JavaScript program to find the leap years in a given range of years.
 
@@ -637,7 +630,7 @@ function filterArray(filterate){
   })
   
 }
-console.log(filterArray([1, 2, "a", "b"]))
+//console.log(filterArray([1, 2, "a", "b"]))
 
 function battingAvg(arr) {
 	let hits = 0
@@ -648,19 +641,13 @@ function battingAvg(arr) {
   })
   return (hits / batAverage).toFixed(5).slice(1)
 }
-console.log(battingAvg([[2, 3, 4]]) )
+//console.log(battingAvg([[2, 3, 4]]) )
 
 function numberSplit(split){
   return [Math.floor(split / 2),Math.ceil(split / 2)]
 }
 
-console.log(numberSplit(4)) 
-
-console.log(numberSplit(10)) 
-
-console.log(numberSplit(11))
-
-console.log(numberSplit(-9) )
+//console.log(numberSplit(10)) 
 
 function sortBylength(arrayString){
   return arrayString.sort((value1,value2)=>{
@@ -671,7 +658,7 @@ function sortBylength(arrayString){
     return 0
   })
 }
-console.log(sortBylength(["a","gregor","win","tray"]))
+//console.log(sortBylength(["a","gregor","win","tray"]))
 
 function sumOfCube(cubes){
   return cubes.reduce((value,index)=>{
@@ -679,7 +666,7 @@ function sumOfCube(cubes){
   },0)
   
 }
-console.log(sumOfCube([2,3,4,7,8]))
+//console.log(sumOfCube([2,3,4,7,8]))
 
 
 function getOnlyEvens(evenNumbers){
@@ -687,24 +674,7 @@ function getOnlyEvens(evenNumbers){
     return even % 2 === 0 && indices % 2 === 0
   })
 }
-console.log(getOnlyEvens([1, 3, 2, 6, 4, 8]))
-
-console.log(getOnlyEvens([0, 1, 2, 3, 4]))
-
-console.log(getOnlyEvens([1, 2, 3, 4, 5]))
-
-
-
-function getFirstValue(array){
-  return array[0]
-}
-console.log(getFirstValue([32,45,46]))
-
-console.log(getFirstValue([1, 2, 3]))
-
-console.log(getFirstValue([80, 5, 100]))
-
-console.log(getFirstValue([-500, 0, 50]))
+//console.log(getOnlyEvens([1, 3, 2, 6, 4, 8]))
 
 function sortNumsAscending (nums){
   if(nums === null){
@@ -716,18 +686,10 @@ function sortNumsAscending (nums){
     
   }) 
   
-  
-  
 }
-console.log(sortNumsAscending([1,3,4,6,10,2,5,7,8,9]))
 
-console.log(sortNumsAscending([1, 2, 10, 50, 5])) 
+//console.log(sortNumsAscending([80, 29, 4, -95, -24, 85])) 
 
-console.log(sortNumsAscending([80, 29, 4, -95, -24, 85])) 
-
-console.log(sortNumsAscending(null)) 
-
-console.log(sortNumsAscending([])) 
 function isAvgWhole(arrayValue){
   const arrayResult = arrayValue.reduce((value,index)=>{
    return value + index
@@ -739,15 +701,9 @@ function isAvgWhole(arrayValue){
     return false
   }
 }
-console.log(isAvgWhole([1, 3]))
 
-console.log(isAvgWhole([1, 2, 3, 4]))
+//console.log(isAvgWhole([1, 2, 3, 4]))
 
-console.log(isAvgWhole([1, 5, 6]))
-
-console.log(isAvgWhole([1, 1, 1]))
-
-console.log(isAvgWhole([9, 2, 2, 5]))
 
 // write a javascript to get the even value and indices in an array 
 function getEvenValue(evenValue){
@@ -758,15 +714,15 @@ function getEvenValue(evenValue){
   })
 }
 
-console.log(getEvenValue([0,3,7,8,10,9,16]))
-console.log(getEvenValue(null))
+//console.log(getEvenValue([0,3,7,8,10,9,16]))
+//console.log(getEvenValue(null))
 
 
 function splitValue(toSplit){
   return [Math.floor(toSplit / 2), Math.ceil(toSplit / 2)]
 }
 
-console.log(splitValue(16))
+//console.log(splitValue(16))
 
 function getAbsSum(numbers){
   let sum = 0
@@ -785,13 +741,8 @@ function getAbsSum1(numbers){
     return num + Math.abs(absoluteValue)
   },0)
 }
-console.log(getAbsSum1([2, -1, 4, 8, 10])) 
 
-console.log(getAbsSum1([-2,-4,-4,-10,-2])) 
-
-console.log(getAbsSum([2, 4, 6, 8, 10]))
-
-console.log(getAbsSum([-1]))
+//console.log(getAbsSum1([-2,-4,-4,-10,-2])
 
 function calculateDifference(items,limit){
   let sum = 0
@@ -800,11 +751,7 @@ function calculateDifference(items,limit){
   }
   return sum - limit
 }
-console.log(calculateDifference({ "baseball bat": 20 }, 5)) 
 
-console.log(calculateDifference({ skate: 10, painting: 20 }, 19)) 
-
-console.log(calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400) )
 
 //OR
 function calculateDifference1(item,limit){
@@ -812,6 +759,4 @@ function calculateDifference1(item,limit){
     return itemValue + limitedValue
   },0) - limit
 }
-console.log(calculateDifference1({pawpaw: 10,apple: 5},5))
-
-console.log(calculateDifference1({pineapple: 200, mango: 200, avocado: 1},400))
+//console.log(calculateDifference1({pawpaw: 10,apple: 5},5))
