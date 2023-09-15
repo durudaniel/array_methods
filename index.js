@@ -793,3 +793,25 @@ console.log(getAbsSum([2, 4, 6, 8, 10]))
 
 console.log(getAbsSum([-1]))
 
+function calculateDifference(items,limit){
+  let sum = 0
+  for(let keys in items){
+    sum += items[keys]
+  }
+  return sum - limit
+}
+console.log(calculateDifference({ "baseball bat": 20 }, 5)) 
+
+console.log(calculateDifference({ skate: 10, painting: 20 }, 19)) 
+
+console.log(calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400) )
+
+//OR
+function calculateDifference1(item,limit){
+  return Object.values(item).reduce((itemValue,limitedValue)=>{
+    return itemValue + limitedValue
+  },0) - limit
+}
+console.log(calculateDifference1({pawpaw: 10,apple: 5},5))
+
+console.log(calculateDifference1({pineapple: 200, mango: 200, avocado: 1},400))
