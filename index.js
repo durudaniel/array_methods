@@ -768,44 +768,28 @@ function splitValue(toSplit){
 
 console.log(splitValue(16))
 
-function calculateDifference(item,limit){
-  let sum = 0
-  for (let key in item){
-    sum += item[key]
-  }
-  return sum - limit
-}
-
-console.log(calculateDifference({ "baseball bat": 20 }, 5))
-
-console.log(calculateDifference({ skate: 10, painting: 20 }, 19)) 
-
-console.log(calculateDifference({ skate: 200, painting: 200, shoes: 1 }, 400))
-
 function getAbsSum(numbers){
   let sum = 0
   for(i in numbers){
     if(numbers[i] < 0){
       sum += numbers[i] * -1
-      continue
+      continue;
     }
     sum += numbers[i]
   }
   return sum
 }
-
-        //OR
+ //OR
 function getAbsSum1(numbers){
   return numbers.reduce((num,absoluteValue)=>{
     return num + Math.abs(absoluteValue)
   },0)
 }
-console.log(getAbsSum1([2, -1, 4, 8, 10])) // 25
+console.log(getAbsSum1([2, -1, 4, 8, 10])) 
 
-//console.log(getAbsSum([-3, -4, -10, -2, -3])) //22
+console.log(getAbsSum1([-2,-4,-4,-10,-2])) 
 
-//console.log(getAbsSum([2, 4, 6, 8, 10]) ) // 30
+console.log(getAbsSum([2, 4, 6, 8, 10]))
 
-console.log(getAbsSum1([-1])) // 1
+console.log(getAbsSum([-1]))
 
-console.log(getAbsSum([500]))
