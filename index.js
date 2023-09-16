@@ -760,3 +760,13 @@ function calculateDifference1(item,limit){
   },0) - limit
 }
 //console.log(calculateDifference1({pawpaw: 10,apple: 5},5))
+
+
+// javascript code to get an sum of all elements in an array and solve for the difference
+
+function sumAndDifference(absArray,difference){
+  return absArray.reduce((arr,value)=>{
+    return arr + Math.abs(value)
+  },0) - difference
+}
+console.log(sumAndDifference([2,4,5,4,-10],10))
