@@ -436,8 +436,8 @@ const combine = names.concat(others);
 const findCombine = combine.findIndex((find) => {
   return find === "wolfghang";
 });
-/*console.log(combine.join("~"));
-console.log(findCombine);
+//console.log(combine.join("~"));
+/*console.log(findCombine);
 console.log(combine);
 
 console.log(names.shift());
@@ -769,18 +769,37 @@ function sumAndDifference(absArray,difference){
     return arr + Math.abs(value)
   },0) - difference
 }
-console.log(sumAndDifference([2,4,5,4,-10],10))
+//console.log(sumAndDifference([2,4,5,4,-10],10))
 
 function findLargestNums(largestArray){
   return largestArray.map((array)=>{
     //console.log(array)
     return Math.max(...array)
+    
   })
 }
 
-console.log(findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]))
+//console.log(findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]))
 
-console.log(findLargestNums([[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]]))
+//console.log(findLargestNums([[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]]))
 
-console.log(findLargestNums([[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5423, 6.4314], [9, 3, 6, 3]])
-)
+/*console.log(findLargestNums([[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5423, 6.4314],
+ [9, 3, 6, 3]]))*/
+
+ function societyName(friends){
+  return friends.map((society)=>{
+    return society.slice(0,1)
+  }).sort((num1,num2)=>{
+    if(num1 < num2)
+    return -1
+   if(num2 < num1)
+   return 1
+  
+  }).join("")
+ }
+
+console.log(societyName(["Adam", "Sarah", "Malcolm"]))
+
+console.log(societyName(["Harry", "Newt", "Luna", "Cho"]))
+ 
+console.log(societyName(["Phoebe", "Chandler", "Rachel", "Ross", "Monica", "Joey"]))
