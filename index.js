@@ -803,3 +803,48 @@ console.log(societyName(["Adam", "Sarah", "Malcolm"]))
 console.log(societyName(["Harry", "Newt", "Luna", "Cho"]))
  
 console.log(societyName(["Phoebe", "Chandler", "Rachel", "Ross", "Monica", "Joey"]))
+
+/*Create a function that takes an array of numbers and return both the minimum and 
+maximum numbers, in that order.*/
+
+function minMax(number){
+  const result = number.map(()=>{
+    const max = Math.max(...number)
+    const min = Math.min(...number)
+    return {min,max}
+  }).slice(0,1)
+  const minValue = result[0].min
+  const maxValue = result[0].max
+  return  [minValue,maxValue]
+}
+
+
+console.log('minMaxValue =', minMax([1, 2, 3, 4, 5]))
+
+console.log('minMaxValue =', minMax([2334454, 5]))
+
+console.log('minMaxValue =', minMax([1]))
+
+/*const arr = [1, -10, 2, 3, 4, 5, 6, 7, 8, 19];
+const result1 = arr.map(() => {
+  const max = Math.max(...arr); // Math.min(1, -10, 2, 3, 4, 5, 6, 7, 8, 19)
+  const min = Math.min(...arr);
+
+  return { max, min };
+});
+arr.splice
+const indexOfResukt = result1.splice(0, 1);
+
+console.log('indexOfResukt', indexOfResukt);
+
+console.log('obj', indexOfResukt[0]);
+
+const maxValue = indexOfResukt[0].max;
+
+console.log('result', maxValue);
+
+const minValue = indexOfResukt[0].min;
+
+console.log('result', minValue);
+
+console.log('result', [minValue, maxValue]);*/
