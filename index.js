@@ -819,7 +819,7 @@ function minMax(number){
 }
 
 
-console.log('minMaxValue =', minMax([1, 2, 3, 4, 5]))
+console.log("minMaxValue = ", minMax([1,2,3,4,5]))
 
 console.log('minMaxValue =', minMax([2334454, 5]))
 
