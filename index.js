@@ -848,3 +848,17 @@ const minValue = indexOfResukt[0].min;
 console.log('result', minValue);
 
 console.log('result', [minValue, maxValue]);*/
+
+function tuckIn(arr1,arr2){
+  const spreadedResult =  arr1.map(()=>{
+    return [...arr1,...arr2]
+  }).splice(0,1)
+  return spreadedResult.sort((a,b)=>{
+    return a - b
+  })
+}
+console.log("spreadedResult = ", tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]))
+
+console.log("spreadedResult = ", tuckIn([15,150], [45, 75, 35])) 
+
+console.log("spreadedResult = ", tuckIn([[1, 2], [5, 6]], [[3, 4]]))
