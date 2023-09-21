@@ -12,16 +12,16 @@
     <p>my first javascript tutoriaL DAY
   
     </p>
+    <button  onclick="alert('welcome to fifa11')">enter</button>
     <input onclick="console.log(new GameCredentials('name','e-mail'))" 
     type="button" id="button3" value="login"  
     ></input>
-    <button  onclick="alert('welcome to fifa11')">enter</button>
     <script>
       function GameCredentials(name,Email){
         this.Email = prompt(`user ${Email}`);
         this.name = prompt(`user ${name}`)
       }
-      const newGame = new GameCredentials("name","e-mail")
+      const newGame = new GameCredentials("name","e-mail").value
       document.getElementById("button3").innerHTML = newGame
     </script>
     <input type="text" id="text1"></input>

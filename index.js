@@ -42,7 +42,7 @@ countryAndStateMap.set("Gulie", "U.S.A");
 countryAndStateMap.set("Blanka", "Brazil");
 
 for (var value of countryAndStateMap.keys()) {
-  console.log(value)
+  console.log(value);
 }
 for (var [keys, values] of countryAndStateMap.entries()) {
 }
@@ -327,7 +327,6 @@ const totalise = library.reduce((sum, total) => {
   return sum + total.bookNumber;
 }, 0);
 
-
 const everyNumber = library.every((num) => {
   return num.bookNumber >= 4;
 });
@@ -411,7 +410,6 @@ ${this.rullingAge} years`;
 const nameOfOrdained = new ClassToOrdained("Rachell", "Bentley", 3);
 //console.log(nameOfOrdained.remark());
 
-
 function PlayerDetail(name, club, country, league, age) {
   this.name = name;
   this.club = club;
@@ -420,17 +418,13 @@ function PlayerDetail(name, club, country, league, age) {
   this.age = age;
 }
 
-
-
-
 const names = ["david", "daniel", "paul", "emmanuel", "michael"];
 const others = ["sammy", "decks", "wolfghang", "duru", "bentley"];
 
-const arrayOfNumbers = [2,3,4,5,6]
-const resultArrays = arrayOfNumbers.reduce((each,num) => {
-  return each + num
-},null);
-
+const arrayOfNumbers = [2, 3, 4, 5, 6];
+const resultArrays = arrayOfNumbers.reduce((each, num) => {
+  return each + num;
+}, null);
 
 const combine = names.concat(others);
 const findCombine = combine.findIndex((find) => {
@@ -452,7 +446,6 @@ console.log(today.getMonth());
 console.log(today.getTime());
 */
 //string methods : trim,includes,EndsWith,startsWith,"split","slice",substr
-
 
 /*
 function QuickChat(name,Email,password){
@@ -490,34 +483,40 @@ add elements in an blank array
 let arrayNumber = {};
 let outPut = [];
 function removeDuplicates(num) {
-
   //loop through parameter num
   for (x = 0; x < num.length; x++) {
     // add num index to an existing variable and assign a value to it
-     arrayNumber[num[x]] = 0;
+    arrayNumber[num[x]] = 0;
   }
-  
+
   // now loop through arrayNumber and push/unshift it to our "outPut" variable
   for (i in arrayNumber) {
-    outPut.push(i)
+    outPut.push(i);
   }
-  return outPut
+  return outPut;
 }
 const duplicateNumbers = [1, 2, 2, 2, 1, 1, 4, 3, 6, 7, 5, 5, 5];
 
-const arrayString = []
-let arrayToPushIn = []
-function deleteDuplicate(stringValue){
-  for(x = 0; x < stringValue.length; x++){
-    arrayString[stringValue[x]] = 0
+const arrayString = [];
+let arrayToPushIn = [];
+function deleteDuplicate(stringValue) {
+  for (x = 0; x < stringValue.length; x++) {
+    arrayString[stringValue[x]] = 0;
   }
-  for(i in arrayString){
-    arrayToPushIn.push(i)
+  for (i in arrayString) {
+    arrayToPushIn.push(i);
   }
-  return arrayToPushIn
+  return arrayToPushIn;
 }
-const duplicateString = ["daniel","daniel","Daniel","Remmy","silas","silas","remmy"];
-
+const duplicateString = [
+  "daniel",
+  "daniel",
+  "Daniel",
+  "Remmy",
+  "silas",
+  "silas",
+  "remmy",
+];
 
 /*Write a JavaScript program to display the colors in the following way.
 
@@ -529,23 +528,20 @@ Output
 "2nd choice is Green."
 "3rd choice is Red."
 - - - - - - - - - - - - -*/
-let colorNumber = 1
+let colorNumber = 1;
 function displayColor() {
-  const abbreviatedWords = ["st","nd","rd","th"]
-  const color = ["green","blue","red","orange"]
-  for(i = 0;i < color.length;i++){
-    for(x = 0; x < abbreviatedWords.length;x++){
-      const resultOfColors = `${colorNumber}${abbreviatedWords[x]} choice is ${color[x]}`
-      colorNumber++
-      
+  const abbreviatedWords = ["st", "nd", "rd", "th"];
+  const color = ["green", "blue", "red", "orange"];
+  for (i = 0; i < color.length; i++) {
+    for (x = 0; x < abbreviatedWords.length; x++) {
+      const resultOfColors = `${colorNumber}${abbreviatedWords[x]} choice is ${color[x]}`;
+      colorNumber++;
     }
-  break;
+    break;
   }
-  
-  
 }
 
-displayColor()
+displayColor();
 
 /*const colors = ["blue","red","green","orange"];
 const abbreviatedWords = ["st","nd","rd","th"];
@@ -561,24 +557,23 @@ for(i = 0;i < colors.length;i++){
 }*/
 
 // Write a JavaScript program to find the sum of squares of a numerical vector.
-function sumNumericVectors(numerics){
-  const sumSquares = numerics.reduce((add,square) =>{
-     return add + Math.pow(square,2)
-    
-  },0)
-  return sumSquares
-};
+function sumNumericVectors(numerics) {
+  const sumSquares = numerics.reduce((add, square) => {
+    return add + Math.pow(square, 2);
+  }, 0);
+  return sumSquares;
+}
 //console.log(sumNumericVectors([3,4,5,6,7]))
 
 // Write a JavaScript program to find the leap years in a given range of years.
 
-function leapYear(years){
-  const arrayToPush = years.filter((year)=>{
-    return year % 4 === 0 || year % 400 === 0
-  })
-  return arrayToPush
+function leapYear(years) {
+  const arrayToPush = years.filter((year) => {
+    return year % 4 === 0 || year % 400 === 0;
+  });
+  return arrayToPush;
 }
-const seriesOfYear = [2000,2010,2012,2015,2018]
+const seriesOfYear = [2000, 2010, 2012, 2015, 2018];
 
 /*function leap_year_range(st_year, end_year) {
   var year_range = [];
@@ -609,174 +604,160 @@ console.log(leap_year_range(2000,2012));*/
 
 //Write a JavaScript program that takes an array of numbers and returns the third smallest number
 
-function test(arr_nums) 
- {
-  
-  return arr_nums.sort((x,y) =>{
-   return y - x
-  }) [arr_nums.length - 3]
+function test(arr_nums) {
+  return arr_nums.sort((x, y) => {
+    return y - x;
+  })[arr_nums.length - 3];
 }
 
-let nums = [2, 3, 5, 7, 1]
+let nums = [2, 3, 5, 7, 1];
 
-nums = [2, 3, 0, 5, 7, 8, -2, -4]
+nums = [2, 3, 0, 5, 7, 8, -2, -4];
 
-
-function filterArray(filterate){
-  return filterate.filter((data)=>{
-    const dataTypes = typeof data 
+function filterArray(filterate) {
+  return filterate.filter((data) => {
+    const dataTypes = typeof data;
     //console.log(dataTypes)
-    return dataTypes === "number"
-  })
-  
+    return dataTypes === "number";
+  });
 }
 //console.log(filterArray([1, 2, "a", "b"]))
 
 function battingAvg(arr) {
-	let hits = 0
-  let batAverage = 0 
-  arr.forEach((value) =>{
-    hits += value[0]
-    batAverage += value[1]
-  })
-  return (hits / batAverage).toFixed(5).slice(1)
+  let hits = 0;
+  let batAverage = 0;
+  arr.forEach((value) => {
+    hits += value[0];
+    batAverage += value[1];
+  });
+  return (hits / batAverage).toFixed(5).slice(1);
 }
 //console.log(battingAvg([[2, 3, 4]]) )
 
-function numberSplit(split){
-  return [Math.floor(split / 2),Math.ceil(split / 2)]
+function numberSplit(split) {
+  return [Math.floor(split / 2), Math.ceil(split / 2)];
 }
 
-//console.log(numberSplit(10)) 
+//console.log(numberSplit(10))
 
-function sortBylength(arrayString){
-  return arrayString.sort((value1,value2)=>{
-    if(value1.length < value2.length)
-    return -1
-    if(value1.length > value2.length)
-    return 1
-    return 0
-  })
+function sortBylength(arrayString) {
+  return arrayString.sort((value1, value2) => {
+    if (value1.length < value2.length) return -1;
+    if (value1.length > value2.length) return 1;
+    return 0;
+  });
 }
 //console.log(sortBylength(["a","gregor","win","tray"]))
 
-function sumOfCube(cubes){
-  return cubes.reduce((value,index)=>{
-    return value + Math.pow(index,3)
-  },0)
-  
+function sumOfCube(cubes) {
+  return cubes.reduce((value, index) => {
+    return value + Math.pow(index, 3);
+  }, 0);
 }
 //console.log(sumOfCube([2,3,4,7,8]))
 
-
-function getOnlyEvens(evenNumbers){
-  return evenNumbers.filter((even,indices)=>{
-    return even % 2 === 0 && indices % 2 === 0
-  })
+function getOnlyEvens(evenNumbers) {
+  return evenNumbers.filter((even, indices) => {
+    return even % 2 === 0 && indices % 2 === 0;
+  });
 }
 //console.log(getOnlyEvens([1, 3, 2, 6, 4, 8]))
 
-function sortNumsAscending (nums){
-  if(nums === null){
-    return []
+function sortNumsAscending(nums) {
+  if (nums === null) {
+    return [];
   }
-  return nums.sort((int,num)=>{
-    if(int < num)
-    return int - num
-    
-  }) 
-  
+  return nums.sort((int, num) => {
+    if (int < num) return int - num;
+  });
 }
 
-//console.log(sortNumsAscending([80, 29, 4, -95, -24, 85])) 
+//console.log(sortNumsAscending([80, 29, 4, -95, -24, 85]))
 
-function isAvgWhole(arrayValue){
-  const arrayResult = arrayValue.reduce((value,index)=>{
-   return value + index
-
-  },0)
-  if(arrayResult % arrayValue.length === 0){
-    return true
-  } else{
-    return false
+function isAvgWhole(arrayValue) {
+  const arrayResult = arrayValue.reduce((value, index) => {
+    return value + index;
+  }, 0);
+  if (arrayResult % arrayValue.length === 0) {
+    return true;
+  } else {
+    return false;
   }
 }
 
 //console.log(isAvgWhole([1, 2, 3, 4]))
 
-
-// write a javascript to get the even value and indices in an array 
-function getEvenValue(evenValue){
-  if(evenValue === null)
-  return []
-  return evenValue.filter((value,index)=>{
-    return value % 2 === 0 && index % 2 === 0
-  })
+// write a javascript to get the even value and indices in an array
+function getEvenValue(evenValue) {
+  if (evenValue === null) return [];
+  return evenValue.filter((value, index) => {
+    return value % 2 === 0 && index % 2 === 0;
+  });
 }
 
 //console.log(getEvenValue([0,3,7,8,10,9,16]))
 //console.log(getEvenValue(null))
 
-
-function splitValue(toSplit){
-  return [Math.floor(toSplit / 2), Math.ceil(toSplit / 2)]
+function splitValue(toSplit) {
+  return [Math.floor(toSplit / 2), Math.ceil(toSplit / 2)];
 }
 
 //console.log(splitValue(16))
 
-function getAbsSum(numbers){
-  let sum = 0
-  for(i in numbers){
-    if(numbers[i] < 0){
-      sum += numbers[i] * -1
+function getAbsSum(numbers) {
+  let sum = 0;
+  for (i in numbers) {
+    if (numbers[i] < 0) {
+      sum += numbers[i] * -1;
       continue;
     }
-    sum += numbers[i]
+    sum += numbers[i];
   }
-  return sum
+  return sum;
 }
- //OR
-function getAbsSum1(numbers){
-  return numbers.reduce((num,absoluteValue)=>{
-    return num + Math.abs(absoluteValue)
-  },0)
+//OR
+function getAbsSum1(numbers) {
+  return numbers.reduce((num, absoluteValue) => {
+    return num + Math.abs(absoluteValue);
+  }, 0);
 }
 
 //console.log(getAbsSum1([-2,-4,-4,-10,-2])
 
-function calculateDifference(items,limit){
-  let sum = 0
-  for(let keys in items){
-    sum += items[keys]
+function calculateDifference(items, limit) {
+  let sum = 0;
+  for (let keys in items) {
+    sum += items[keys];
   }
-  return sum - limit
+  return sum - limit;
 }
 
-
 //OR
-function calculateDifference1(item,limit){
-  return Object.values(item).reduce((itemValue,limitedValue)=>{
-    return itemValue + limitedValue
-  },0) - limit
+function calculateDifference1(item, limit) {
+  return (
+    Object.values(item).reduce((itemValue, limitedValue) => {
+      return itemValue + limitedValue;
+    }, 0) - limit
+  );
 }
 //console.log(calculateDifference1({pawpaw: 10,apple: 5},5))
 
-
 // javascript code to get an sum of all elements in an array and solve for the difference
 
-function sumAndDifference(absArray,difference){
-  return absArray.reduce((arr,value)=>{
-    return arr + Math.abs(value)
-  },0) - difference
+function sumAndDifference(absArray, difference) {
+  return (
+    absArray.reduce((arr, value) => {
+      return arr + Math.abs(value);
+    }, 0) - difference
+  );
 }
 //console.log(sumAndDifference([2,4,5,4,-10],10))
 
-function findLargestNums(largestArray){
-  return largestArray.map((array)=>{
+function findLargestNums(largestArray) {
+  return largestArray.map((array) => {
     //console.log(array)
-    return Math.max(...array)
-    
-  })
+    return Math.max(...array);
+  });
 }
 
 //console.log(findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]))
@@ -786,44 +767,47 @@ function findLargestNums(largestArray){
 /*console.log(findLargestNums([[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5423, 6.4314],
  [9, 3, 6, 3]]))*/
 
- function societyName(friends){
-  return friends.map((society)=>{
-    return society.slice(0,1)
-  }).sort((num1,num2)=>{
-    if(num1 < num2)
-    return -1
-   if(num2 < num1)
-   return 1
-  
-  }).join("")
- }
+function societyName(friends) {
+  return friends
+    .map((society) => {
+      return society.slice(0, 1);
+    })
+    .sort((num1, num2) => {
+      if (num1 < num2) return -1;
+      if (num2 < num1) return 1;
+    })
+    .join("");
+}
 
-console.log(societyName(["Adam", "Sarah", "Malcolm"]))
+console.log(societyName(["Adam", "Sarah", "Malcolm"]));
 
-console.log(societyName(["Harry", "Newt", "Luna", "Cho"]))
- 
-console.log(societyName(["Phoebe", "Chandler", "Rachel", "Ross", "Monica", "Joey"]))
+console.log(societyName(["Harry", "Newt", "Luna", "Cho"]));
+
+console.log(
+  societyName(["Phoebe", "Chandler", "Rachel", "Ross", "Monica", "Joey"])
+);
 
 /*Create a function that takes an array of numbers and return both the minimum and 
 maximum numbers, in that order.*/
 
-function minMax(number){
-  const result = number.map(()=>{
-    const max = Math.max(...number)
-    const min = Math.min(...number)
-    return {min,max}
-  }).slice(0,1)
-  const minValue = result[0].min
-  const maxValue = result[0].max
-  return  [minValue,maxValue]
+function minMax(number) {
+  const result = number
+    .map(() => {
+      const max = Math.max(...number);
+      const min = Math.min(...number);
+      return { min, max };
+    })
+    .slice(0, 1);
+  const minValue = result[0].min;
+  const maxValue = result[0].max;
+  return [minValue, maxValue];
 }
 
+console.log("minMaxValue = ", minMax([1, 2, 3, 4, 5]));
 
-console.log("minMaxValue = ", minMax([1,2,3,4,5]))
+console.log("minMaxValue =", minMax([2334454, 5]));
 
-console.log('minMaxValue =', minMax([2334454, 5]))
-
-console.log('minMaxValue =', minMax([1]))
+console.log("minMaxValue =", minMax([1]));
 
 /*const arr = [1, -10, 2, 3, 4, 5, 6, 7, 8, 19];
 const result1 = arr.map(() => {
@@ -849,16 +833,51 @@ console.log('result', minValue);
 
 console.log('result', [minValue, maxValue]);*/
 
-function tuckIn(arr1,arr2){
-  const spreadedResult =  arr1.map(()=>{
-    return [...arr1,...arr2]
+function tuckIn(arr1, arr2) {
+  return arr1.map(()=>{
+    let firstIndex = arr1[0]
+    let secondIndex = arr1[1]
+    return [firstIndex,...arr2,secondIndex]
   }).splice(0,1)
-  return spreadedResult.sort((a,b)=>{
-    return a - b
-  })
+  
 }
-console.log("spreadedResult = ", tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]))
+console.log("spreadedResult = ", tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]));
 
-console.log("spreadedResult = ", tuckIn([15,150], [45, 75, 35])) 
+console.log("spreadedResult = ", tuckIn([15, 150], [45, 75, 35]));
 
-console.log("spreadedResult = ", tuckIn([[1, 2], [5, 6]], [[3, 4]]))
+console.log(
+  "spreadedResult = ",
+  tuckIn(
+    [
+      [1, 2],
+      [5, 6],
+    ],
+    [[3, 4]]
+  )
+);
+
+function canNest(arr1,arr2) {
+  const arr1Min =  Math.min(...arr1)
+  const arr1Max = Math.max(...arr1)
+  const arr2Min =  Math.min(...arr2)
+  const arr2Max = Math.max(...arr2)
+  if(arr1Min > arr2Min && arr1Max < arr2Max){
+    return true
+  }
+    return false  
+}
+
+
+
+console.log(canNest([1, 2, 3, 4], [0, 6])) //➞ true
+
+console.log(canNest([3, 1], [4, 0])) //➞ true
+
+console.log(canNest([9, 9, 8], [8, 9])) //➞ false
+
+console.log(canNest([1, 2, 3, 4], [2, 3]) )//➞ false
+
+function cloneArray(arr1){
+  return arr1.splice(0)
+}
+console.log(cloneArray([1,2,5,6,4]))
