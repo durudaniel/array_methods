@@ -834,12 +834,13 @@ console.log('result', minValue);
 console.log('result', [minValue, maxValue]);*/
 
 function tuckIn(arr1, arr2) {
-  return arr1.map(()=>{
-    let firstIndex = arr1[0]
-    let secondIndex = arr1[1]
-    return [firstIndex,...arr2,secondIndex]
-  }).splice(0,1)
-  
+  return arr1
+    .map(() => {
+      let firstIndex = arr1[0];
+      let secondIndex = arr1[1];
+      return [firstIndex, ...arr2, secondIndex];
+    })
+    .splice(0, 1);
 }
 console.log("spreadedResult = ", tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]));
 
@@ -856,28 +857,20 @@ console.log(
   )
 );
 
-function canNest(arr1,arr2) {
-  const arr1Min =  Math.min(...arr1)
-  const arr1Max = Math.max(...arr1)
-  const arr2Min =  Math.min(...arr2)
-  const arr2Max = Math.max(...arr2)
-  if(arr1Min > arr2Min && arr1Max < arr2Max){
-    return true
+function canNest(arr1, arr2) {
+  const arr1Min = Math.min(...arr1);
+  const arr1Max = Math.max(...arr1);
+  const arr2Min = Math.min(...arr2);
+  const arr2Max = Math.max(...arr2);
+  if (arr1Min > arr2Min && arr2Max > arr1Max) {
+    return true;
   }
-    return false  
+  return false;
 }
+console.log(canNest([1, 2, 3, 4], [0, 6]));
 
+console.log(canNest([3, 1], [4, 0]));
 
+console.log(canNest([9, 9, 8], [8, 9]));
 
-console.log(canNest([1, 2, 3, 4], [0, 6])) //➞ true
-
-console.log(canNest([3, 1], [4, 0])) //➞ true
-
-console.log(canNest([9, 9, 8], [8, 9])) //➞ false
-
-console.log(canNest([1, 2, 3, 4], [2, 3]) )//➞ false
-
-function cloneArray(arr1){
-  return arr1.splice(0)
-}
-console.log(cloneArray([1,2,5,6,4]))
+console.log(canNest([1, 2, 3, 4], [2, 3]));
