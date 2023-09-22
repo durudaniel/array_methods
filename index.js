@@ -881,16 +881,34 @@ function clonArray(array) {
 console.log(clonArray([1, 2, 4, 5]));
 
 //return the max and min of an array max first while min second
-function minMaxReturn(minMax){
-  const result =  minMax.map(() =>{
-    const min = Math.min(...minMax)
-    const max = Math.max(...minMax)
-    return {max,min}
-  }).splice(0,1)
-  const minResult = result[0].min
-  const maxResult = result[0].max
-  return [maxResult,minResult]
+function minMaxReturn(minMax) {
+  const result = minMax
+    .map(() => {
+      const min = Math.min(...minMax);
+      const max = Math.max(...minMax);
+      return { max, min };
+    })
+    .splice(0, 1);
+  const minResult = result[0].min;
+  const maxResult = result[0].max;
+  return [maxResult, minResult];
 }
-console.log("min and max result = " ,minMaxReturn([1,9,5,6,7,4]))
+console.log("min and max result = ", minMaxReturn([1, 9, 5, 6, 7, 4]));
 
-console.log("min and max result = " ,minMaxReturn([0]))
+console.log("min and max result = ", minMaxReturn([0]));
+
+// javascript code to tuck in an array of string in the middle of another array
+function tuckInArrayString(arrString1, arrString2) {
+  return arrString1
+    .map(() => {
+      const indexArrayString1 = arrString1[0];
+      const indexArrayString2 = arrString1[1];
+      return [indexArrayString1, ...arrString2, indexArrayString2];
+    })
+    .splice(0, 1);
+}
+
+console.log(
+  "tuck in = ",
+  tuckInArrayString(["pawpaw", "apple"], ["strawberry", "cherry"])
+);
