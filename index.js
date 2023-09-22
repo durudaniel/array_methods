@@ -867,15 +867,30 @@ function canNest(arr1, arr2) {
   }
   return false;
 }
-console.log(canNest([1, 2, 3, 4], [0, 6]));
+//console.log(canNest([1, 2, 3, 4], [0, 6]));
 
-console.log(canNest([3, 1], [4, 0]));
+//console.log(canNest([3, 1], [4, 0]));
 
-console.log(canNest([9, 9, 8], [8, 9]));
+//console.log(canNest([9, 9, 8], [8, 9]));
 
-console.log(canNest([1, 2, 3, 4], [2, 3]));
+//console.log(canNest([1, 2, 3, 4], [2, 3]));
 
 function clonArray(array) {
   return array.splice(0);
 }
 console.log(clonArray([1, 2, 4, 5]));
+
+//return the max and min of an array max first while min second
+function minMaxReturn(minMax){
+  const result =  minMax.map(() =>{
+    const min = Math.min(...minMax)
+    const max = Math.max(...minMax)
+    return {max,min}
+  }).splice(0,1)
+  const minResult = result[0].min
+  const maxResult = result[0].max
+  return [maxResult,minResult]
+}
+console.log("min and max result = " ,minMaxReturn([1,9,5,6,7,4]))
+
+console.log("min and max result = " ,minMaxReturn([0]))
