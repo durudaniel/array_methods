@@ -912,3 +912,16 @@ console.log(
   "tuck in = ",
   tuckInArrayString(["pawpaw", "apple"], ["strawberry", "cherry"])
 );
+
+// write a javascript code to remove all strings from an array
+
+function filterStrings(arrString) {
+  return arrString.filter((filterate) => {
+    const stringDataType = typeof filterate;
+    return stringDataType === "string";
+  });
+}
+console.log(
+  "string type =",
+  filterStrings(["1", "daniel", null, true, false, 2, 3, 4, "uche"])
+);
