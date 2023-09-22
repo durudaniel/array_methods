@@ -925,3 +925,15 @@ console.log(
   "string type =",
   filterStrings(["1", "daniel", null, true, false, 2, 3, 4, "uche"])
 );
+
+// write a javascript code to return the min and max from two different array and combine
+
+function differentMinMax(min, max) {
+  const minValue = Math.min(...min);
+  const maxValue = Math.max(...max);
+  return [minValue, maxValue];
+}
+console.log(
+  "different min and max =",
+  differentMinMax([10, 5, 20], [50, 45, 7])
+);
