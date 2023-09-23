@@ -536,6 +536,7 @@ function displayColor() {
     for (x = 0; x < abbreviatedWords.length; x++) {
       const resultOfColors = `${colorNumber}${abbreviatedWords[x]} choice is ${color[x]}`;
       colorNumber++;
+      return resultOfColors;
     }
     break;
   }
@@ -612,7 +613,7 @@ function test(arr_nums) {
 
 let nums = [2, 3, 5, 7, 1];
 
-nums = [2, 3, 0, 5, 7, 8, -2, -4];
+console.log("third smallest =", test([1, 0, 3, 5, 6, 7]));
 
 function filterArray(filterate) {
   return filterate.filter((data) => {
@@ -685,7 +686,7 @@ function isAvgWhole(arrayValue) {
   }
 }
 
-//console.log(isAvgWhole([1, 2, 3, 4]))
+//console.log("whole number = " ,isAvgWhole([1, 2, 3, 4]))
 
 // write a javascript to get the even value and indices in an array
 function getEvenValue(evenValue) {
@@ -760,7 +761,7 @@ function findLargestNums(largestArray) {
   });
 }
 
-//console.log(findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]))
+//console.log("largest num =" ,findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]))
 
 //console.log(findLargestNums([[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]]))
 
@@ -937,3 +938,10 @@ console.log(
   "different min and max =",
   differentMinMax([10, 5, 20], [50, 45, 7])
 );
+
+function toArray(obj) {
+  return Object.entries(obj);
+}
+console.log(toArray({ a: 1, b: 2 }));
+
+toArray({ shrimp: 15, tots: 12 });
