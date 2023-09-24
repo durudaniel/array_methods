@@ -945,3 +945,10 @@ function toArray(obj) {
 console.log(toArray({ a: 1, b: 2 }));
 
 toArray({ shrimp: 15, tots: 12 });
+
+function computeSum(arr1,arr2){
+  return arr1.map((value,index)=>{
+    return value + arr2[index]
+  },0)
+}
+console.log("computeSum =" ,computeSum([1,2,3,4],[5,6,7,8]))
