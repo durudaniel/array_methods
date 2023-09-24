@@ -951,4 +951,4 @@ function computeSum(arr1,arr2){
     return value + arr2[index]
   },0)
 }
-console.log("computeSum =" ,computeSum([1,2,3,4],[5,6,7,8]))
+console.log("computeSum = ", computeSum([1,2,3,4],[5,6,7,8]))
