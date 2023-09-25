@@ -780,13 +780,13 @@ function societyName(friends) {
     .join("");
 }
 
-console.log(societyName(["Adam", "Sarah", "Malcolm"]));
+//console.log(societyName(["Adam", "Sarah", "Malcolm"]));
 
-console.log(societyName(["Harry", "Newt", "Luna", "Cho"]));
+//console.log(societyName(["Harry", "Newt", "Luna", "Cho"]));
 
-console.log(
+/*console.log(
   societyName(["Phoebe", "Chandler", "Rachel", "Ross", "Monica", "Joey"])
-);
+);*/
 
 /*Create a function that takes an array of numbers and return both the minimum and 
 maximum numbers, in that order.*/
@@ -804,11 +804,11 @@ function minMax(number) {
   return [minValue, maxValue];
 }
 
-console.log("minMaxValue = ", minMax([1, 2, 3, 4, 5]));
+//console.log("minMaxValue = ", minMax([1, 2, 3, 4, 5]));
 
-console.log("minMaxValue =", minMax([2334454, 5]));
+//console.log("minMaxValue =", minMax([2334454, 5]));
 
-console.log("minMaxValue =", minMax([1]));
+//console.log("minMaxValue =", minMax([1]));
 
 /*const arr = [1, -10, 2, 3, 4, 5, 6, 7, 8, 19];
 const result1 = arr.map(() => {
@@ -843,11 +843,11 @@ function tuckIn(arr1, arr2) {
     })
     .splice(0, 1);
 }
-console.log("spreadedResult = ", tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]));
+//console.log("spreadedResult = ", tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]));
 
-console.log("spreadedResult = ", tuckIn([15, 150], [45, 75, 35]));
+//console.log("spreadedResult = ", tuckIn([15, 150], [45, 75, 35]));
 
-console.log(
+/*console.log(
   "spreadedResult = ",
   tuckIn(
     [
@@ -856,7 +856,7 @@ console.log(
     ],
     [[3, 4]]
   )
-);
+);*/
 
 function canNest(arr1, arr2) {
   const arr1Min = Math.min(...arr1);
@@ -879,7 +879,7 @@ function canNest(arr1, arr2) {
 function clonArray(array) {
   return array.splice(0);
 }
-console.log(clonArray([1, 2, 4, 5]));
+//console.log(clonArray([1, 2, 4, 5]));
 
 //return the max and min of an array max first while min second
 function minMaxReturn(minMax) {
@@ -894,9 +894,9 @@ function minMaxReturn(minMax) {
   const maxResult = result[0].max;
   return [maxResult, minResult];
 }
-console.log("min and max result = ", minMaxReturn([1, 9, 5, 6, 7, 4]));
+//console.log("min and max result = ", minMaxReturn([1, 9, 5, 6, 7, 4]));
 
-console.log("min and max result = ", minMaxReturn([0]));
+//console.log("min and max result = ", minMaxReturn([0]));
 
 // javascript code to tuck in an array of string in the middle of another array
 function tuckInArrayString(arrString1, arrString2) {
@@ -909,10 +909,10 @@ function tuckInArrayString(arrString1, arrString2) {
     .splice(0, 1);
 }
 
-console.log(
+/*console.log(
   "tuck in = ",
   tuckInArrayString(["pawpaw", "apple"], ["strawberry", "cherry"])
-);
+);*/
 
 // write a javascript code to remove all strings from an array
 
@@ -922,10 +922,10 @@ function filterStrings(arrString) {
     return stringDataType === "string";
   });
 }
-console.log(
+/*console.log(
   "string type =",
   filterStrings(["1", "daniel", null, true, false, 2, 3, 4, "uche"])
-);
+);*/
 
 // write a javascript code to return the min and max from two different array and combine
 
@@ -934,21 +934,40 @@ function differentMinMax(min, max) {
   const maxValue = Math.max(...max);
   return [minValue, maxValue];
 }
-console.log(
+/*console.log(
   "different min and max =",
   differentMinMax([10, 5, 20], [50, 45, 7])
-);
+);*/
 
 function toArray(obj) {
   return Object.entries(obj);
 }
-console.log(toArray({ a: 1, b: 2 }));
+//console.log("toArray = ",toArray({ a: 1, b: 2 }));
 
-toArray({ shrimp: 15, tots: 12 });
+//console.log("toArray = ",toArray({ shrimp: 15, tots: 12 }));
 
-function computeSum(arr1,arr2){
-  return arr1.map((value,index)=>{
-    return value + arr2[index]
-  },0)
+function computeSum(arr1, arr2) {
+  return arr1.map((value, index) => {
+    return value + arr2[index];
+  });
 }
-console.log("computeSum = ", computeSum([1,2,3,4],[5,6,7,8]))
+console.log("computeSum = ", computeSum([1, 2, 3, 4], [5, 6, 7, 8, 80]));
+
+function twoSum(nums, target_num) {
+  var map = [];
+  var indexnum = [];
+
+  for (var x = 0; x < nums.length; x++) {
+    //console.log("index =",nums[x])
+    if (map[nums[x]] != null) {
+      var index = map[nums[x]];
+      indexnum[0] = index;
+      indexnum[1] = x;
+      
+    } else {
+      map[target_num - nums[x]] = x;
+    }
+  }
+  return indexnum;
+}
+console.log(twoSum([10, 20, 10, 40, 50, 60, 70], 50));
