@@ -947,9 +947,13 @@ function toArray(obj) {
 //console.log("toArray = ",toArray({ shrimp: 15, tots: 12 }));
 
 function computeSum(arr1, arr2) {
-  return arr1.map((value, index) => {
-    return value + arr2[index];
-  });
+  const arrayLengthMax = Math.max(arr1.length, arr2.length);
+  const result = [];
+  for (i = 0; i < arrayLengthMax; i++) {
+    const sum = (arr1[i] || 0) + (arr2[i] || 0);
+    result.push(sum);
+  }
+  return result;
 }
 console.log("computeSum = ", computeSum([1, 2, 3, 4], [5, 6, 7, 8, 80]));
 
@@ -958,16 +962,30 @@ function twoSum(nums, target_num) {
   var indexnum = [];
 
   for (var x = 0; x < nums.length; x++) {
-    //console.log("index =",nums[x])
+    //console.log("index =", map[nums[x]]);
     if (map[nums[x]] != null) {
       var index = map[nums[x]];
       indexnum[0] = index;
       indexnum[1] = x;
-      
+      //break
     } else {
       map[target_num - nums[x]] = x;
     }
   }
   return indexnum;
 }
-console.log(twoSum([10, 20, 10, 40, 50, 60, 70], 50));
+const arr1 = [10, 20, 10, 40, 50, 60, 70];
+console.log(twoSum(arr1, 50));
+
+function sumArray(arr1, arr2) {
+  const pushed = [];
+  for (i = 0; i < arr1.length; i++) {
+    for (j = 0; j < arr2.length; j++) {
+      const sum = (arr1[j] || 0) + (arr2[j] || 0);
+      pushed.push(sum);
+    }
+    break;
+  }
+  return pushed;
+}
+console.log("pushed", sumArray([1, 2, 3, 5], [8, 7, 9, 10, 20]));
