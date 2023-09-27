@@ -1007,3 +1007,16 @@ console.log(
     [6, 7],
   ])
 );
+
+function toFlat(array){
+  let result = []
+  for(i = 0; i < array.length; i++){
+    if(Array.isArray(array[i])){
+       result = result.concat(array[i])
+    }else{
+      result.push(array[i])
+    }
+  }
+  return result
+}
+console.log("deep flat =", toFlat([1, [2], [3, [[4]]],[5,6]]))
