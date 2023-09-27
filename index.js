@@ -480,7 +480,7 @@ add elements in an blank array
 //Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
 
 // here you create global variable and an empty value
-let arrayNumber = {};
+let arrayNumber = [];
 let outPut = [];
 function removeDuplicates(num) {
   //loop through parameter num
@@ -496,12 +496,12 @@ function removeDuplicates(num) {
   return outPut;
 }
 const duplicateNumbers = [1, 2, 2, 2, 1, 1, 4, 3, 6, 7, 5, 5, 5];
-
+console.log("duplicate =", removeDuplicates(duplicateNumbers));
 const arrayString = [];
 let arrayToPushIn = [];
 function deleteDuplicate(stringValue) {
   for (x = 0; x < stringValue.length; x++) {
-    arrayString[stringValue[x]] = 0;
+    arrayString[stringValue[x]];
   }
   for (i in arrayString) {
     arrayToPushIn.push(i);
@@ -958,24 +958,18 @@ function computeSum(arr1, arr2) {
 console.log("computeSum = ", computeSum([1, 2, 3, 4], [5, 6, 7, 8, 80]));
 
 function twoSum(nums, target_num) {
-  var map = [];
-  var indexnum = [];
-
-  for (var x = 0; x < nums.length; x++) {
-    //console.log("index =", map[nums[x]]);
-    if (map[nums[x]] != null) {
-      var index = map[nums[x]];
-      indexnum[0] = index;
-      indexnum[1] = x;
-      //break
-    } else {
-      map[target_num - nums[x]] = x;
+  let result = 0;
+  for (i = 0; i < nums.length; i++) {
+    for (j = 0; j < nums.length; j++) {
+      if (nums[j] + nums[i] === target_num)
+        result = [nums.indexOf(nums[j]), nums.indexOf(nums[i])];
     }
   }
-  return indexnum;
+
+  return result;
 }
-const arr1 = [10, 20, 10, 40, 50, 60, 70];
-console.log(twoSum(arr1, 50));
+const arr1 = [10, 20, 40, 50, 60, 70];
+console.log("twoSum ", twoSum(arr1, 100));
 
 function sumArray(arr1, arr2) {
   const pushed = [];
@@ -989,3 +983,27 @@ function sumArray(arr1, arr2) {
   return pushed;
 }
 console.log("pushed", sumArray([1, 2, 3, 5], [8, 7, 9, 10, 20]));
+
+/*function twoSum1(nums,target_num){
+  let result = 0
+  result = nums.findIndex((value)=>{
+    return [(nums[value] + nums[value]) === target_num]
+  })
+  return result
+}
+console.log("twoSum1 ",twoSum1(arr1, 50))*/
+
+function flatten(arrayToFlat) {
+  return arrayToFlat.reduce((b, c) => {
+    return b.concat(c);
+  });
+}
+console.log(
+  "flat array =",
+  flatten([
+    [0, 1],
+    [2, 3],
+    [4, 5],
+    [6, 7],
+  ])
+);
