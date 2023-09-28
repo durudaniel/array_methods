@@ -1008,15 +1008,28 @@ console.log(
   ])
 );
 
-function toFlat(array){
-  let result = []
-  for(i = 0; i < array.length; i++){
-    if(Array.isArray(array[i])){
-       result = result.concat(array[i])
-    }else{
-      result.push(array[i])
+function toFlat(array) {
+  let result = [];
+  for (i = 0; i < array.length; i++) {
+    if (Array.isArray(array[i])) {
+      result = result.concat(array[i]);
+    } else {
+      result.push(array[i]);
     }
   }
-  return result
+  return result;
 }
-console.log("deep flat =", toFlat([1, [2], [3, [[4]]],[5,6]]))
+console.log("deep flat =", toFlat([1, [2], [3, [[4]]], [5, 6]]));
+
+function difference(arr1, arr2) {
+  let result = [];
+  for (i in arr1) {
+    if (arr2.indexOf(arr1[i]) === -1) result.push(arr1[i]);
+    if (arr1.indexOf(arr2[i]) === -1) result.push(arr2[i]);
+  }
+  return result.sort((a, b) => {
+    return a - b;
+  });
+}
+
+console.log("difference =", difference([1, 2, 3], [100, 2, 1, 10]));
