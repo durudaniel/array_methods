@@ -1022,14 +1022,23 @@ function toFlat(array) {
 console.log("deep flat =", toFlat([1, [2], [3, [[4]]], [5, 6]]));
 
 function difference(arr1, arr2) {
-  let result = [];
-  for (i in arr1) {
-    if (arr2.indexOf(arr1[i]) === -1) result.push(arr1[i]);
-    if (arr1.indexOf(arr2[i]) === -1) result.push(arr2[i]);
+  const result = []
+  for(i in arr1){
+    if(arr2.indexOf() <= -1) result.push(arr1[i])
   }
-  return result.sort((a, b) => {
-    return a - b;
-  });
+  for(j in arr2){
+    if(arr1.indexOf(arr2[j]) <= -1) result.push(arr2[j])
+  }
+return result.sort((a,b)=>{
+  return a - b
+})
 }
 
 console.log("difference =", difference([1, 2, 3], [100, 2, 1, 10]));
+
+function retrieve(arr1){
+ return arr1.filter((value)=>{
+  return value > 0 || value < 0
+ })
+}
+console.log(retrieve([NaN, 0, 15, false, -22, '',undefined, 47, null]))
