@@ -1022,23 +1022,33 @@ function toFlat(array) {
 console.log("deep flat =", toFlat([1, [2], [3, [[4]]], [5, 6]]));
 
 function difference(arr1, arr2) {
-  const result = []
-  for(i in arr1){
-    if(arr2.indexOf() <= -1) result.push(arr1[i])
+  const result = [];
+  for (i in arr1) {
+    if (arr2.indexOf() <= -1) result.push(arr1[i]);
   }
-  for(j in arr2){
-    if(arr1.indexOf(arr2[j]) <= -1) result.push(arr2[j])
+  for (j in arr2) {
+    if (arr1.indexOf(arr2[j]) <= -1) result.push(arr2[j]);
   }
-return result.sort((a,b)=>{
-  return a - b
-})
+  return result.sort((a, b) => {
+    return a - b;
+  });
 }
 
 console.log("difference =", difference([1, 2, 3], [100, 2, 1, 10]));
 
-function retrieve(arr1){
- return arr1.filter((value)=>{
-  return value > 0 || value < 0
- })
+function retrieve(arr1) {
+  return arr1.filter((value) => {
+    return value > 0 || value < 0;
+  });
 }
-console.log(retrieve([NaN, 0, 15, false, -22, '',undefined, 47, null]))
+console.log(retrieve([NaN, 0, 15, false, -22, "", undefined, 47, null]));
+
+//write a javascript code to sum two different array using reduce method
+
+function sumArray(arr1, arr2) {
+  return arr1.map((value, index) => {
+    return value + arr2[index];
+  });
+}
+
+console.log("sumArray", sumArray([1, 2, 3, 4], [11, 15, 7, 4]));
