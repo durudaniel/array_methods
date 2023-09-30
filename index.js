@@ -1052,3 +1052,19 @@ function sumArray(arr1, arr2) {
 }
 
 console.log("sumArray", sumArray([1, 2, 3, 4], [11, 15, 7, 4]));
+
+//do the summing if the other length of the array is greater the other
+
+function sumTwoArray(arr1, arr2) {
+  const result = [];
+  let sum = 0;
+  for (i in arr1) {
+    for (j in arr2) {
+      sum = (arr1[j] || 0) + (arr2[j] || 0);
+      result.push(sum);
+    }
+    break;
+  }
+  return result;
+}
+console.log("sumTwoArray =", sumTwoArray([1, 2, 3, 4], [11, 15, 7, 4, 20]));
