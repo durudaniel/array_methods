@@ -613,7 +613,7 @@ function test(arr_nums) {
 
 let nums = [2, 3, 5, 7, 1];
 
-console.log("third smallest =", test([1, 0, 3, 5, 6, 7]));
+//console.log("third smallest =", test([1, 0, 3, 5, 6, 7]));
 
 function filterArray(filterate) {
   return filterate.filter((data) => {
@@ -955,7 +955,7 @@ function computeSum(arr1, arr2) {
   }
   return result;
 }
-console.log("computeSum = ", computeSum([1, 2, 3, 4], [5, 6, 7, 8, 80]));
+//console.log("computeSum = ", computeSum([1, 2, 3, 4], [5, 6, 7, 8, 80]));
 
 function twoSum(nums, target_num) {
   let result = 0;
@@ -969,7 +969,7 @@ function twoSum(nums, target_num) {
   return result;
 }
 const arr1 = [10, 20, 40, 50, 60, 70];
-console.log("twoSum ", twoSum(arr1, 100));
+//console.log("twoSum ", twoSum(arr1, 100));
 
 function sumArray(arr1, arr2) {
   const pushed = [];
@@ -982,7 +982,7 @@ function sumArray(arr1, arr2) {
   }
   return pushed;
 }
-console.log("pushed", sumArray([1, 2, 3, 5], [8, 7, 9, 10, 20]));
+//console.log("pushed", sumArray([1, 2, 3, 5], [8, 7, 9, 10, 20]));
 
 /*function twoSum1(nums,target_num){
   let result = 0
@@ -998,7 +998,7 @@ function flatten(arrayToFlat) {
     return b.concat(c);
   });
 }
-console.log(
+/*console.log(
   "flat array =",
   flatten([
     [0, 1],
@@ -1006,7 +1006,7 @@ console.log(
     [4, 5],
     [6, 7],
   ])
-);
+);*/
 
 function toFlat(array) {
   let result = [];
@@ -1019,7 +1019,7 @@ function toFlat(array) {
   }
   return result;
 }
-console.log("deep flat =", toFlat([1, [2], [3, [[4]]], [5, 6]]));
+//console.log("deep flat =", toFlat([1, [2], [3, [[4]]], [5, 6]]));
 
 function difference(arr1, arr2) {
   const result = [];
@@ -1034,14 +1034,14 @@ function difference(arr1, arr2) {
   });
 }
 
-console.log("difference =", difference([1, 2, 3], [100, 2, 1, 10]));
+//console.log("difference =", difference([1, 2, 3], [100, 2, 1, 10]));
 
 function retrieve(arr1) {
   return arr1.filter((value) => {
     return value > 0 || value < 0;
   });
 }
-console.log(retrieve([NaN, 0, 15, false, -22, "", undefined, 47, null]));
+//console.log(retrieve([NaN, 0, 15, false, -22, "", undefined, 47, null]));
 
 //write a javascript code to sum two different array using reduce method
 
@@ -1051,7 +1051,7 @@ function sumArray(arr1, arr2) {
   });
 }
 
-console.log("sumArray", sumArray([1, 2, 3, 4], [11, 15, 7, 4]));
+//console.log("sumArray", sumArray([1, 2, 3, 4], [11, 15, 7, 4]));
 
 //do the summing if the other length of the array is greater the other
 
@@ -1065,6 +1065,8 @@ function sumTwoArray(arr1, arr2) {
     }
     break;
   }
-  return result;
+  return result.sort((a , b)=>{
+    return a - b
+  });
 }
-console.log("sumTwoArray =", sumTwoArray([1, 2, 3, 4], [11, 15, 7, 4, 20]));
+//console.log("sumTwoArray =", sumTwoArray([1, 2, 3, 4], [11, 15, 7, 4, 20]));
