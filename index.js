@@ -1043,7 +1043,7 @@ function retrieve(arr1) {
 }
 //console.log(retrieve([NaN, 0, 15, false, -22, "", undefined, 47, null]));
 
-//write a javascript code to sum two different array using reduce method
+//write a javascript code to sum two different array using map method
 
 function sumArray(arr1, arr2) {
   return arr1.map((value, index) => {
@@ -1065,16 +1065,32 @@ function sumTwoArray(arr1, arr2) {
     }
     break;
   }
-  return result.sort((a , b)=>{
-    return a - b
+  return result.sort((a, b) => {
+    return a - b;
   });
 }
 //console.log("sumTwoArray =", sumTwoArray([1, 2, 3, 4], [11, 15, 7, 4, 20]));
-function union(arr1,arr2){
+function union(arr1, arr2) {
   //const result = []
-  return arr1.reduce(()=>{
-    return arr1.concat(arr2)
-  })
-  
+  return arr1.reduce(() => {
+    return arr1.concat(arr2);
+  });
 }
-console.log("union =", union([1,2,3],[3,4,6]))
+console.log("union =", union([1, 2, 3], [3, 4, 6]));
+
+function union1(arr1,arr2){
+  const result = []
+  let unionSum = []
+  for(i = 0; i < arr1.length;i++){
+    if(arr2.indexOf(arr1[i]) -2) result.push(arr1[i])
+  }
+  for(j = 0; j < arr2.length; j++){
+    if(arr1.indexOf(arr2[j]) -1) result.push(arr2[j])
+  }
+ if(Array.isArray(result))
+   unionSum = unionSum.concat(result)
+  return unionSum.sort((a,b)=>{
+    return a - b
+  })
+}
+console.log(" union1 =",union1([1, 2, 3], [100, 2, 1, 10]))
