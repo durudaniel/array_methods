@@ -1024,7 +1024,7 @@ function toFlat(array) {
 function difference(arr1, arr2) {
   const result = [];
   for (i in arr1) {
-    if (arr2.indexOf() <= -1) result.push(arr1[i]);
+    if (arr2.indexOf(arr1[i]) <= -1) result.push(arr1[i]);
   }
   for (j in arr2) {
     if (arr1.indexOf(arr2[j]) <= -1) result.push(arr2[j]);
@@ -1070,3 +1070,11 @@ function sumTwoArray(arr1, arr2) {
   });
 }
 //console.log("sumTwoArray =", sumTwoArray([1, 2, 3, 4], [11, 15, 7, 4, 20]));
+function union(arr1,arr2){
+  //const result = []
+  return arr1.reduce(()=>{
+    return arr1.concat(arr2)
+  })
+  
+}
+console.log("union =", union([1,2,3],[3,4,6]))
