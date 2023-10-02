@@ -1082,7 +1082,7 @@ function union1(arr1, arr2) {
   const result = [];
   let unionSum = [];
   for (i = 0; i < arr1.length; i++) {
-    if (arr2.indexOf(arr1[i]) ) result.push(arr1[i]);
+    if (arr2.indexOf(arr1[i])) result.push(arr1[i]);
   }
   for (i = 0; i < arr2.length; i++) {
     if (arr1.indexOf(arr2[i])) result.push(arr2[i]);
@@ -1098,18 +1098,32 @@ function union1(arr1, arr2) {
   });
 }
 console.log(" union1 =", union1([1, 2, 3], [100, 2, 1, 10]));
-console.log(" union1 =", union1([2,3,4,5],[7,3,2,8]))
+console.log(" union1 =", union1([2, 3, 4, 5], [7, 3, 2, 8]));
 
-function sortByTitle(titles){
-  return titles.sort((a,b)=>{
-      if(a.title < b.title)
-        return -1
-      if(a.title > b.title)
-        return 1
-  })
+function library1(titles) {
+  return titles.sort((a, b) => {
+    if (a.title < b.title) return -1;
+    if (a.title > b.title) return 1;
+  });
 }
-console.log("title =",sortByTitle([ 
-  { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
-  { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
-  { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
-  ]))
+console.log(
+  "title =",
+  library1([
+    { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
+    { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
+    {
+      author: "Suzanne Collins",
+      title: "Mockingjay: The Final Book of The Hunger Games",
+      libraryID: 3245,
+    },
+  ])
+);
+
+// write a javascript code to remove a specific element from an array
+
+function remove_array_element(remove){
+  const firstIndex = remove[0]
+  const secondIndex = remove[1]
+  return [firstIndex,secondIndex]
+}
+console.log("remove = ",remove_array_element([2, 5, 9, 6]))
