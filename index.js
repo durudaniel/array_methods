@@ -1121,9 +1121,9 @@ console.log(
 
 // write a javascript code to remove a specific element from an array
 
-function remove_array_element(remove){
-  const firstIndex = remove[0]
-  const secondIndex = remove[1]
-  return [firstIndex,secondIndex]
+function remove_array_element(remove) {
+  const firstIndex = remove[0];
+  const secondIndex = remove[1];
+  return [firstIndex, secondIndex];
 }
-console.log("remove = ",remove_array_element([2, 5, 9, 6]))
+console.log("remove = ", remove_array_element([2, 5, 9, 6]));
