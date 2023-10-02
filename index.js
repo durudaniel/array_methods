@@ -1078,19 +1078,18 @@ function union(arr1, arr2) {
 }
 console.log("union =", union([1, 2, 3], [3, 4, 6]));
 
-function union1(arr1,arr2){
-  const result = []
-  let unionSum = []
-  for(i = 0; i < arr1.length;i++){
-    if(arr2.indexOf(arr1[i]) -2) result.push(arr1[i])
+function union1(arr1, arr2) {
+  const result = [];
+  let unionSum = [];
+  for (i = 0; i < arr1.length; i++) {
+    if (arr2.indexOf(arr1[i]) - 2) result.push(arr1[i]);
   }
-  for(j = 0; j < arr2.length; j++){
-    if(arr1.indexOf(arr2[j]) -1) result.push(arr2[j])
+  for (j = 0; j < arr2.length; j++) {
+    if (arr1.indexOf(arr2[j]) - 1) result.push(arr2[j]);
   }
- if(Array.isArray(result))
-   unionSum = unionSum.concat(result)
-  return unionSum.sort((a,b)=>{
-    return a - b
-  })
+  if (Array.isArray(result)) unionSum = unionSum.concat(result);
+  return unionSum.sort((a, b) => {
+    return a - b;
+  });
 }
-console.log(" union1 =",union1([1, 2, 3], [100, 2, 1, 10]))
+console.log(" union1 =", union1([1, 2, 3], [100, 2, 1, 10]));
