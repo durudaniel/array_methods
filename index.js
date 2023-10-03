@@ -1138,3 +1138,12 @@ function toRemove(arr1,num){
   return result
 }
 console.log("remove =", toRemove([2, 5, 9, 6],5))
+
+function find_specific(arr1,num){
+  for(i = 0; i < arr1.length; i++)
+    if(arr1[i] === num)
+      return true
+  
+  return false
+}
+console.log("find =", find_specific([2, 5, 9, 6],5))
