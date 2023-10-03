@@ -1127,3 +1127,14 @@ function remove_array_element(remove) {
   return [firstIndex, secondIndex];
 }
 console.log("remove = ", remove_array_element([2, 5, 9, 6]));
+
+function toRemove(arr1,num){
+  const result = []
+  for(i = 0; i < arr1.length; i++){
+    if(arr1[i] === num)
+     arr1.splice(1,1)
+    result.push(arr1[i])
+  }
+  return result
+}
+console.log("remove =", toRemove([2, 5, 9, 6],5))
