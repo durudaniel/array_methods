@@ -1082,10 +1082,10 @@ function union1(arr1, arr2) {
   const result = [];
   let unionSum = [];
   for (i = 0; i < arr1.length; i++) {
-    if (arr2.indexOf(arr1[i])) result.push(arr1[i]);
+    if (arr2.indexOf(arr1[i]) -2) result.push(arr1[i]);
   }
   for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i])) result.push(arr2[i]);
+    if (arr1.indexOf(arr2[i]) -1) result.push(arr2[i]);
   }
   /*for(n in result){
     if(result.hasOwnProperty(n))
@@ -1147,3 +1147,16 @@ function find_specific(arr1,num){
   return false
 }
 console.log("find =", find_specific([2, 5, 9, 6],5))
+
+function removeNum(arr1,num){
+  const result = []
+  let index = 0
+  for(i = 0; i < arr1.length; i++){
+    index = arr1.indexOf(num)
+     if(index > -1)
+     arr1.splice(index,1)
+    result.push(arr1[i])
+  }
+  return result
+}
+console.log("remove =", removeNum([2, 5, 9, 6],6))
