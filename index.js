@@ -1160,3 +1160,12 @@ function removeNum(arr1,num){
   return result
 }
 console.log("remove =", removeNum([2, 5, 9, 6],6))
+
+// write a javascript to empty an array and return the original
+
+function emptyArray(array){
+   array = 0
+   if(array === 0)
+   return []
+}
+console.log("array is =" ,emptyArray([1,3,4,5]))
