@@ -612,6 +612,7 @@ function test(arr_nums) {
 }
 
 let nums = [2, 3, 5, 7, 1];
+//console.log("third smallest = ",test(nums))
 
 //console.log("third smallest =", test([1, 0, 3, 5, 6, 7]));
 
@@ -1082,10 +1083,10 @@ function union1(arr1, arr2) {
   const result = [];
   let unionSum = [];
   for (i = 0; i < arr1.length; i++) {
-    if (arr2.indexOf(arr1[i]) -2) result.push(arr1[i]);
+    if (arr2.indexOf(arr1[i]) - 2) result.push(arr1[i]);
   }
   for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) -1) result.push(arr2[i]);
+    if (arr1.indexOf(arr2[i]) - 1) result.push(arr2[i]);
   }
   /*for(n in result){
     if(result.hasOwnProperty(n))
@@ -1128,44 +1129,44 @@ function remove_array_element(remove) {
 }
 console.log("remove = ", remove_array_element([2, 5, 9, 6]));
 
-function toRemove(arr1,num){
-  const result = []
-  for(i = 0; i < arr1.length; i++){
-    if(arr1[i] === num)
-     arr1.splice(1,1)
-    result.push(arr1[i])
+function toRemove(arr1, num) {
+  const result = [];
+  for (i = 0; i < arr1.length; i++) {
+    if (arr1[i] === num) arr1.splice(1, 1);
+    result.push(arr1[i]);
   }
-  return result
+  return result;
 }
-console.log("remove =", toRemove([2, 5, 9, 6],5))
+console.log("remove =", toRemove([2, 5, 9, 6], 5));
 
-function find_specific(arr1,num){
-  for(i = 0; i < arr1.length; i++)
-    if(arr1[i] === num)
-      return true
-  
-  return false
+function find_specific(arr1, num) {
+  for (i = 0; i < arr1.length; i++) if (arr1[i] === num) return true;
+
+  return false;
 }
-console.log("find =", find_specific([2, 5, 9, 6],5))
+console.log("find =", find_specific([2, 5, 9, 6], 5));
 
-function removeNum(arr1,num){
-  const result = []
-  let index = 0
-  for(i = 0; i < arr1.length; i++){
-    index = arr1.indexOf(num)
-     if(index > -1)
-     arr1.splice(index,1)
-    result.push(arr1[i])
+function removeNum(arr1, num) {
+  const result = [];
+  let index = 0;
+  for (i = 0; i < arr1.length; i++) {
+    index = arr1.indexOf(num);
+    if (index > -1) arr1.splice(index, 1);
+    result.push(arr1[i]);
   }
-  return result
+  return result;
 }
-console.log("remove =", removeNum([2, 5, 9, 6],6))
+console.log("remove =", removeNum([2, 5, 9, 6], 6));
 
 // write a javascript to empty an array and return the original
 
-function emptyArray(array){
-   array = 0
-   if(array === 0)
-   return []
+function emptyArray(array) {
+  array = 0;
+  if (array === 0) return [];
 }
-console.log("array is =" ,emptyArray([1,3,4,5]))
+console.log("array is =", emptyArray([1, 3, 4, 5]));
+
+function to_get_random(elements) {
+  return elements[Math.floor(Math.random() * elements.length)];
+}
+console.log("random number is =", to_get_random([6, 7, 8, 20, 90]));
