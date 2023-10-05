@@ -1194,3 +1194,15 @@ function filter_array_values(array_value){
 }
 
 console.log("array_value =",filter_array_values([58, '', 'abcd', true, null, false, 0]));
+
+function unique_element(arr1,arr2){
+  const result = []
+  for(i = 0; i < arr1.length; i++){
+    if((arr2.indexOf(arr1[i])) -2) result.push(arr1[i])
+  }
+  for(j = 0; j < arr2.length; j++){
+    if((arr1.indexOf(arr2[j])) -1) result.push(arr2[j])
+  }
+return result
+}
+console.log("unique element",unique_element([1, 2, 3], [100, 2, 1, 10]));
