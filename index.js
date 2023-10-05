@@ -1186,3 +1186,11 @@ function move(array, num1, num2) {
 
 console.log("moved array =", move([10, 20, 30, 40, 50], -1, -2));
 console.log("moved array =", move([10, 20, 30, 40, 50], 0, 2));
+
+//write a javasript code to filter null,undefined and empty string from an array
+
+function filter_array_values(array_value){
+  return array_value.filter((value) => value === 58 || value === "abcd" || value === true )
+}
+
+console.log("array_value =",filter_array_values([58, '', 'abcd', true, null, false, 0]));
