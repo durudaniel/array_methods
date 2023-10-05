@@ -1170,3 +1170,19 @@ function to_get_random(elements) {
   return elements[Math.floor(Math.random() * elements.length)];
 }
 console.log("random number is =", to_get_random([6, 7, 8, 20, 90]));
+
+//write a javascript function to move an array from one position to another
+// [10, 20, 30, 50, 40],[20, 30, 10, 40, 50],
+function move(array, num1, num2) {
+  while (num1 < 0) {
+    num1 += array.length;
+  }
+  while (num2 < 0) {
+    num2 += array.length;
+  }
+  array.splice(num2, 0, array.splice(num1, 1)[0]);
+  return array;
+}
+
+console.log("moved array =", move([10, 20, 30, 40, 50], -1, -2));
+console.log("moved array =", move([10, 20, 30, 40, 50], 0, 2));
