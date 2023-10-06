@@ -1227,3 +1227,18 @@ function to_add(arr1, arr2) {
 //const array1 = [8, 0, 18, 20, 41];
 //const array2 = [6, 8, 2, 4];
 console.log("sum =", to_add([8, 0, 18, 20, 41], [6, 8, 2, 4]));
+
+//write a javascript code to get absolute sum of an two array
+function get_abs_sum(arr1, arr2) {
+  const result = [];
+  let sum = 0;
+  const Array_length = Math.max(arr1.length, arr2.length);
+  for (i = 0; i < Array_length; i++) {
+    const abs1 = Math.abs(arr1[i]);
+    const abs2 = Math.abs(arr2[i]);
+    sum = abs1 + abs2;
+    result.push(sum);
+  }
+  return result;
+}
+console.log("absolute Calc", get_abs_sum([1, -2, 7, -10], [-8, 11, 20, -3]));
