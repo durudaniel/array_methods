@@ -1189,20 +1189,41 @@ console.log("moved array =", move([10, 20, 30, 40, 50], 0, 2));
 
 //write a javasript code to filter null,undefined and empty string from an array
 
-function filter_array_values(array_value){
-  return array_value.filter((value) => value === 58 || value === "abcd" || value === true )
+function filter_array_values(array_value) {
+  return array_value.filter(
+    (value) => value === 58 || value === "abcd" || value === true
+  );
 }
 
-console.log("array_value =",filter_array_values([58, '', 'abcd', true, null, false, 0]));
+console.log(
+  "array_value =",
+  filter_array_values([58, "", "abcd", true, null, false, 0])
+);
 
-function unique_element(arr1,arr2){
-  const result = []
-  for(i = 0; i < arr1.length; i++){
-    if((arr2.indexOf(arr1[i])) -2) result.push(arr1[i])
+function unique_element(arr1, arr2) {
+  const result = [];
+  for (i = 0; i < arr1.length; i++) {
+    if (arr2.indexOf(arr1[i]) - 2) result.push(arr1[i]);
   }
-  for(j = 0; j < arr2.length; j++){
-    if((arr1.indexOf(arr2[j])) -1) result.push(arr2[j])
+  for (j = 0; j < arr2.length; j++) {
+    if (arr1.indexOf(arr2[j]) - 1) result.push(arr2[j]);
   }
-return result
+  return result;
 }
-console.log("unique element",unique_element([1, 2, 3], [100, 2, 1, 10]));
+console.log("unique element", unique_element([1, 2, 3], [100, 2, 1, 10]));
+
+/* write a javascript function to add two arrays element when once length is longer than 
+the other*/
+
+function to_add(arr1, arr2) {
+  const result = [];
+  const max_length = Math.max(arr1.length, arr2.length);
+  for (i = 0; i < max_length; i++) {
+    const sum = (arr1[i] || 0) + (arr2[i] || 0);
+    result.push(sum);
+  }
+  return result.sort((a, b) => a - b);
+}
+//const array1 = [8, 0, 18, 20, 41];
+//const array2 = [6, 8, 2, 4];
+console.log("sum =", to_add([8, 0, 18, 20, 41], [6, 8, 2, 4]));
