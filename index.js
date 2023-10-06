@@ -1242,3 +1242,18 @@ function get_abs_sum(arr1, arr2) {
   return result;
 }
 console.log("absolute Calc", get_abs_sum([1, -2, 7, -10], [-8, 11, 20, -3]));
+
+//write a javascript code to return the max and min of an array
+function array_max_min(arr1, arr2) {
+  const result = arr1
+    .map(() => {
+      const max = Math.max(...arr1);
+      const min = Math.min(...arr2);
+      return { max, min };
+    })
+    .splice(0, 1);
+  const maxResult = result[0].max;
+  const minResult = result[0].min;
+  return [maxResult, minResult];
+}
+console.log("minMax =", array_max_min([100, 80, -110], [70, 10, 50]));
