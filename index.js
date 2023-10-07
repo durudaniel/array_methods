@@ -1257,3 +1257,15 @@ function array_max_min(arr1, arr2) {
   return [maxResult, minResult];
 }
 console.log("minMax =", array_max_min([100, 80, -110], [70, 10, 50]));
+
+function array_filled(num, value) {
+  const pre_filled = Array.apply(null, Array(num)).map(
+    Number.prototype.valueOf,
+    value
+  );
+  return pre_filled;
+}
+
+console.log("pre_filled =", array_filled(6, 0));
+
+console.log("pre_filled =", array_filled(4, 11));
