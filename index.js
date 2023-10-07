@@ -1269,3 +1269,13 @@ function array_filled(num, value) {
 console.log("pre_filled =", array_filled(6, 0));
 
 console.log("pre_filled =", array_filled(4, 11));
+
+function array_filled1(str, value) {
+  const pre_fill_string = Array.apply(undefined, Array(str)).map(
+    String.prototype.valueOf,
+    value
+  );
+  return pre_fill_string;
+}
+console.log("prefilled string =", array_filled1(3, "default value"));
+console.log("preFilled string =", array_filled1(4, "password"));
