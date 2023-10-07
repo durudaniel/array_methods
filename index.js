@@ -1291,3 +1291,8 @@ function sumAllNUm(numArray) {
     }, 0);
 }
 console.log("number element =", sumAllNUm([2, 3, 0, 5, 7, 8, true, false]));
+
+function thirdSmallestNum(thirdNum) {
+  return thirdNum.sort((a, b) => a - b)[thirdNum.length - 3];
+}
+console.log("third num =", thirdSmallestNum([2, 3, 5, 7, 1]));
