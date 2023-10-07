@@ -1279,3 +1279,15 @@ function array_filled1(str, value) {
 }
 console.log("prefilled string =", array_filled1(3, "default value"));
 console.log("preFilled string =", array_filled1(4, "password"));
+
+function sumAllNUm(numArray) {
+  return numArray
+    .filter((number) => {
+      const typeOf = typeof number;
+      return typeOf;
+    })
+    .reduce((sum, value) => {
+      return sum + value;
+    }, 0);
+}
+console.log("number element =", sumAllNUm([2, 3, 0, 5, 7, 8, true, false]));
