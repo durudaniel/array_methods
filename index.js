@@ -1035,7 +1035,7 @@ function difference(arr1, arr2) {
   });
 }
 
-//console.log("difference =", difference([1, 2, 3], [100, 2, 1, 10]));
+console.log("difference =", difference([1, 2, 3], [100, 2, 1, 10]));
 
 function retrieve(arr1) {
   return arr1.filter((value) => {
@@ -1173,7 +1173,7 @@ console.log("random number is =", to_get_random([6, 7, 8, 20, 90]));
 
 //write a javascript function to move an array from one position to another
 // [10, 20, 30, 50, 40],[20, 30, 10, 40, 50],
-function move(array, num1, num2) {
+/*function move(array, num1, num2) {
   while (num1 < 0) {
     num1 += array.length;
   }
@@ -1185,7 +1185,7 @@ function move(array, num1, num2) {
 }
 
 console.log("moved array =", move([10, 20, 30, 40, 50], -1, -2));
-console.log("moved array =", move([10, 20, 30, 40, 50], 0, 2));
+console.log("moved array =", move([10, 20, 30, 40, 50], 0, 2));*/
 
 //write a javasript code to filter null,undefined and empty string from an array
 
@@ -1258,7 +1258,7 @@ function array_max_min(arr1, arr2) {
 }
 console.log("minMax =", array_max_min([100, 80, -110], [70, 10, 50]));
 
-function array_filled(num, value) {
+/*function array_filled(num, value) {
   const pre_filled = Array.apply(null, Array(num)).map(
     Number.prototype.valueOf,
     value
@@ -1278,7 +1278,7 @@ function array_filled1(str, value) {
   return pre_fill_string;
 }
 console.log("prefilled string =", array_filled1(3, "default value"));
-console.log("preFilled string =", array_filled1(4, "password"));
+console.log("preFilled string =", array_filled1(4, "password"));*/
 
 function sumAllNUm(numArray) {
   return numArray
@@ -1296,3 +1296,52 @@ function thirdSmallestNum(thirdNum) {
   return thirdNum.sort((a, b) => a - b)[thirdNum.length - 3];
 }
 console.log("third num =", thirdSmallestNum([2, 3, 5, 7, 1]));
+
+// Given an array of objects representing products, write a function that
+// filters out products with a price greater than $50
+// and returns an array of product names in uppercase.
+// For example, if the input is:
+// [
+//   { name: "Laptop", price: 800 },
+//   { name: "Smartphone", price: 600 },
+//   { name: "Headphones", price: 30 },
+//   { name: "Tablet", price: 120 },
+// ]
+// The function should return ["LAPTOP", "SMARTPHONE", "TABLET"].
+function filterExpensiveProducts(products) {
+  return products
+    .filter((value) => {
+      return value.price > 50;
+    })
+    .map((key) => {
+      return key.name.toUpperCase();
+    });
+}
+console.log(
+  filterExpensiveProducts([
+    { name: "Laptop", price: 800 },
+    { name: "Smartphone", price: 600 },
+    { name: "Headphones", price: 30 },
+    { name: "Tablet", price: 120 },
+  ])
+);
+
+/* Given an array of numbers, write a function that performs the following operations:
+// 1. Remove all even numbers from the array.
+// 2. Double the value of all remaining numbers.
+// 3. Square the final values.
+// 4. Return the sum of all squared values.
+// For example, if the input array is [2, 3, 5, 7, 8], the function should return 243, which is calculated as follows:
+// - Remove even numbers: [3, 5, 7]
+// - Double the values: [6, 10, 14]
+// - Square the values: [36, 100, 196]
+// - Sum of s*/
+
+function to_remove_even(array) {
+  return array
+    .filter((value) => value % 2 !== 0)
+    .map((value) => value + value)
+    .map((value) => Math.pow(value, 2))
+    .reduce((sum, value) => sum + value, 0);
+}
+console.log("odd = ", to_remove_even([2, 3, 5, 7, 8]));
