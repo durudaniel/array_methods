@@ -1345,3 +1345,11 @@ function to_remove_even(array) {
     .reduce((sum, value) => sum + value, 0);
 }
 console.log("odd = ", to_remove_even([2, 3, 5, 7, 8]));
+
+function toFill(value, fill) {
+  return Array.apply(null, Array(fill))
+    .map(Number.prototype.valueOf, value)
+    .splice(0, 3);
+}
+
+console.log(toFill(2, 7));
