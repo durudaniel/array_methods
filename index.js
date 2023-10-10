@@ -1353,3 +1353,9 @@ function toFill(value, fill) {
 }
 
 console.log(toFill(2, 7));
+
+function toDivide(number) {
+  const result = [Math.floor(number / 2), Math.ceil(number / 2)];
+  return result;
+}
+console.log("number = ", toDivide(10));
