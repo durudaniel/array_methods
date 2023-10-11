@@ -1359,3 +1359,19 @@ function toDivide(number) {
   return result;
 }
 console.log("number = ", toDivide(10));
+
+function BMI(massMark, heightMark, massJohn, heightJohn) {
+  const BMIMark = massMark / (heightMark * heightMark);
+  const BMIJohn = massJohn / (heightJohn * heightJohn);
+  //condition if BMIMark is greater than BMIJohn
+  if (BMIMark > BMIJohn) {
+    return `Mark's BMI ${Math.round(
+      BMIMark
+    )} is greater than john's BMI ${Math.round(BMIJohn)}`;
+  } else {
+    return `Mark's BMI ${Math.round(
+      BMIMark
+    )} is smaller than john's BMI ${Math.round(BMIJohn)}`;
+  }
+}
+console.log("BMI =", BMI(78,1.69,92,1.95))
