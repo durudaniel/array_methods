@@ -1374,7 +1374,6 @@ function BMI(massMark, heightMark, massJohn, heightJohn) {
     )} is smaller than john's BMI ${Math.round(BMIJohn)}`;
   }
 }
-console.log("BMI =", BMI(78, 1.69, 92, 1.95));
 
 function tip_and_bill(bill) {
   const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
@@ -1382,4 +1381,3 @@ function tip_and_bill(bill) {
     ${bill + tip}💲`;
   return total_value;
 }
-console.log("tip and bill =", tip_and_bill(275));
