@@ -1381,3 +1381,8 @@ function tip_and_bill(bill) {
     ${bill + tip}💲`;
   return total_value;
 }
+
+function third_num(array) {
+  return array.sort((a, b) => a - b)[array.length - 3];
+}
+console.log(" third_num 💋", third_num([1, 2, 3, 4, 5, 6]));
