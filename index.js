@@ -1386,3 +1386,20 @@ function third_num(array) {
   return array.sort((a, b) => a - b)[array.length - 3];
 }
 console.log(" third_num 💋", third_num([1, 2, 3, 4, 5, 6]));
+
+function maths_abs(arr1, arr2) {
+  let result = [];
+  for (var firstIndex = 0; firstIndex < arr1.length; firstIndex++) {
+    for (var secondIndex = 0; secondIndex < arr2.length; secondIndex++) {
+     const  result1 = Math.abs(arr1[secondIndex]) 
+     const  result2 = Math.abs(arr2[secondIndex]);
+     result.push(result1 + result2)
+    }
+    break;
+  }
+  return result;
+}
+console.log(
+  "Âbsolute summing😎 = ",
+  maths_abs([1, 2, 3, 4, 10], [17, -10, 4, -15, 2])
+);
