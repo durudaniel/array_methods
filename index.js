@@ -1391,9 +1391,9 @@ function maths_abs(arr1, arr2) {
   let result = [];
   for (var firstIndex = 0; firstIndex < arr1.length; firstIndex++) {
     for (var secondIndex = 0; secondIndex < arr2.length; secondIndex++) {
-     const  result1 = Math.abs(arr1[secondIndex]) 
-     const  result2 = Math.abs(arr2[secondIndex]);
-     result.push(result1 + result2)
+      const result1 = Math.abs(arr1[secondIndex]);
+      const result2 = Math.abs(arr2[secondIndex]);
+      result.push(result1 + result2);
     }
     break;
   }
@@ -1403,3 +1403,19 @@ console.log(
   "Âbsolute summing😎 = ",
   maths_abs([1, 2, 3, 4, 10], [17, -10, 4, -15, 2])
 );
+
+function compute_winner(score1, score2, score3) {
+  return (score1 + score2 + score3) / 3;
+}
+const scoreDolphins = compute_winner(71, 45, 58);
+const scoreKoalas = compute_winner(27, 12, 41);
+const checkWinner = (avgDolphins, avgKoalas) => {
+  if (avgDolphins > avgKoalas * 2) {
+    return `Dolphins Wins.. 🏆💪 ${avgDolphins} Vs. ${Math.round(avgKoalas)}`;
+  } else if (avgDolphins <= avgKoalas * 2) {
+    return `Koalas Win.. 🏆💪 ${avgKoalas} Vs. ${avgDolphins}`;
+  } else {
+    return "No one WINs... 💔💔💔";
+  }
+};
+console.log("outcome =", checkWinner(scoreDolphins, scoreKoalas));
