@@ -1419,3 +1419,9 @@ const checkWinner = (avgDolphins, avgKoalas) => {
   }
 };
 console.log("outcome =", checkWinner(scoreDolphins, scoreKoalas));
+
+function alertArray(array) {
+  const array2 = [2,4,6,8]
+  return array.concat(array2).length
+}
+console.log(alertArray([1,3,5,7,9]))
