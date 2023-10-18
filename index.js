@@ -1463,3 +1463,11 @@ function toCalcTip(tip) {
   return totals;
 }
 console.log(toCalcTip(tip));
+const jonas = {
+  firstName: 'jonas',
+  lastName: 'schnnetman',
+  job: 'teacher',
+  jonasFriends: ["michael","john","bob"]
+};
+console.log(`${jonas["firstName"]} has ${jonas["jonasFriends"].length} friends but the💑best
+friend is ${jonas["jonasFriends"][1]}`);
