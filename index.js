@@ -1511,3 +1511,7 @@ function bmiResult() {
   }
 }
 console.log(bmiResult())
+
+for(let iterate = 1; iterate < 5 ; iterate++){
+  console.log(`food🍕 ${iterate} is served in plate 🍽 ${iterate}`);
+}
