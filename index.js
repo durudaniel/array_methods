@@ -1482,3 +1482,32 @@ console.log(
       : "didn't have a drivers license" + "🚫"
   }`
 );
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.62,
+  calcBMI: function () {
+    return (this.bmi = this.mass / this.height ** 2);
+  },
+};
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    return (this.bmi = this.mass / this.height ** 2);
+  },
+};
+mark.calcBMI();
+john.calcBMI();
+function bmiResult() {
+  if (mark.bmi > john.bmi) {
+    return `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI(${john.bmi})!`;
+  } else {
+    return `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI(
+      ${mark.bmi}
+    )!`;
+  }
+}
+console.log(bmiResult())
