@@ -1464,10 +1464,21 @@ function toCalcTip(tip) {
 }
 console.log(toCalcTip(tip));
 const jonas = {
-  firstName: 'jonas',
-  lastName: 'schnnetman',
-  job: 'teacher',
-  jonasFriends: ["michael","john","bob"]
+  firstName: "jonas",
+  lastName: "schnnetman",
+  birthYear: 1991,
+  job: "teacher",
+  hasDriversLicense: false,
+  jonasFriends: ["michael", "john", "bob"],
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
 };
-console.log(`${jonas["firstName"]} has ${jonas["jonasFriends"].length} friends but the💑best
-friend is ${jonas["jonasFriends"][1]}`);
+console.log(
+  `${jonas.firstName} is a ${jonas.calcAge()} year old man, and ${
+    jonas.hasDriversLicense
+      ? "has a driver's license " + "✔"
+      : "didn't have a drivers license" + "🚫"
+  }`
+);
