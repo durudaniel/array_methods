@@ -1515,3 +1515,13 @@ console.log(bmiResult())
 for(let iterate = 1; iterate < 5 ; iterate++){
   console.log(`food🍕 ${iterate} is served in plate 🍽 ${iterate}`);
 }
+
+function loop_in_name(array){
+  for(let index = 1 ; index < array.length; index++){
+    for(let count = 1; count < 2; count++){
+      return `food ${count} is giving to ${array[index]} `
+    }
+    continue;
+  }
+}
+console.log(loop_in_name(["michael","dan"]))
