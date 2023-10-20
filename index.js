@@ -1510,18 +1510,37 @@ function bmiResult() {
     )!`;
   }
 }
-console.log(bmiResult())
+console.log(bmiResult());
 
-for(let iterate = 1; iterate < 5 ; iterate++){
+for (let iterate = 1; iterate < 5; iterate++) {
   console.log(`food🍕 ${iterate} is served in plate 🍽 ${iterate}`);
 }
 
-function loop_in_name(array){
-  for(let index = 1 ; index < array.length; index++){
-    for(let count = 1; count < 2; count++){
-      return `food ${count} is giving to ${array[index]} `
+function loop_in_name(array) {
+  for (let index = 1; index <= array.length; index++) {
+    for (let count = 1; count < array.length + 1; count++) {
+      console.log(`food ${index} is giving to ${array[index]} `);
     }
-    continue;
+    
   }
 }
-console.log(loop_in_name(["michael","dan"]))
+loop_in_name(["michael", "dan"]);
+
+function getType(array) {
+  const result = [];
+  let condition = 0;
+  for (i = 0; i < array.length; i++) {
+    condition = typeof array[i];
+    if (condition === "number") result.push(array[i]);
+  }
+  return result;
+}
+console.log(getType([1, 1, 3, "bed", "lion"]));
+
+const numberArray = [1,2,true,false,[1,2,3]]
+const resultArray = []
+for(i = 0; i < numberArray.length; i++){
+  resultArray.push(typeof numberArray[i])
+  
+}
+console.log(resultArray)
