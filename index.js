@@ -1537,10 +1537,17 @@ function getType(array) {
 }
 console.log(getType([1, 1, 3, "bed", "lion"]));
 
-const numberArray = [1,2,true,false,[1,2,3]]
-const resultArray = []
-for(i = 0; i < numberArray.length; i++){
-  resultArray.push(typeof numberArray[i])
-  
+const calcTip1 = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+/* Write your code below. Good luck! 🙂 */
+const billse = [22,295,176,440,37,105,10,1100,86,52];
+const tips = [];
+const totals = [];
+for(let value = 0; value < billse.length; value++){
+    tips.push(calcTip1(billse[value]));
+    totals.push(tips[value] + billse[value])
 }
-console.log(resultArray)
+console.log(tips)
+console.log(totals);
