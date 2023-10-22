@@ -1521,7 +1521,6 @@ function loop_in_name(array) {
     for (let count = 1; count < array.length + 1; count++) {
       console.log(`food ${index} is giving to ${array[index]} `);
     }
-    
   }
 }
 loop_in_name(["michael", "dan"]);
@@ -1537,17 +1536,41 @@ function getType(array) {
 }
 console.log(getType([1, 1, 3, "bed", "lion"]));
 
-const calcTip1 = function (bill) {
+/*const calcTip1 = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-};
+};*/
 
 /* Write your code below. Good luck! 🙂 */
-const billse = [22,295,176,440,37,105,10,1100,86,52];
+function calctip2(bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+const billse = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
 const totals = [];
-for(let value = 0; value < billse.length; value++){
-    tips.push(calcTip1(billse[value]));
-    totals.push(tips[value] + billse[value])
+for (let i = 0; i < billse.length; i++) {
+  tips.push(calctip2(billse[i]));
+  totals.push(tips[i] + billse[i]);
 }
-console.log(tips)
+/*for (let value = 0; value < billse.length; value++) {
+  const tip =  tips.push(calcTip1(billse[value]));
+  //tips.push(calcTip1(billse[value]));
+  //totals.push(tips[value] + billse[value]);
+  totals.push(tip + billse[value])
+}*/
+console.log(tips);
 console.log(totals);
+
+function uniqueNum(array, array2) {
+  const result = [];
+  let sum = 0;
+  for (let index = 0; index < array.length; index++) {
+    if (array2.indexOf(array[index]) - 3) result.push(array[index]);
+  }
+  for (let index2 = 0; index2 < array2.length; index2++) {
+    if (array.indexOf(array2[index2]) - 4) result.push(array2[index2]);
+  }
+  return result.sort(function (a, b) {
+    return a - b;
+  });
+}
+console.log(uniqueNum([1, 2, 3, 5, 4], [100, 8, 4, 3]));
