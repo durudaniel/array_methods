@@ -1562,7 +1562,7 @@ console.log(totals);
 
 function uniqueNum(array, array2) {
   const result = [];
-  let sum = 0;
+
   for (let index = 0; index < array.length; index++) {
     if (array2.indexOf(array[index]) - 3) result.push(array[index]);
   }
@@ -1574,3 +1574,16 @@ function uniqueNum(array, array2) {
   });
 }
 console.log(uniqueNum([1, 2, 3, 5, 4], [100, 8, 4, 3]));
+
+// Write a javscript code to return the [max,min] in an array containing numbers
+function max_and_min(arr1, arr2) {
+  const min_max_result = [arr1, arr2].map(() => {
+    const min = Math.min(...arr2);
+    const max = Math.max(...arr1);
+    return { min, max };
+  });
+  const minValue = min_max_result[0].min;
+  const maxValue = min_max_result[0].max;
+  return [minValue, maxValue];
+}
+console.log(max_and_min([12, 45, 67, 8], [2, 0, 3, 5]));
