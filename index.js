@@ -1587,3 +1587,25 @@ function max_and_min(arr1, arr2) {
   return [minValue, maxValue];
 }
 console.log(max_and_min([12, 45, 67, 8], [2, 0, 3, 5]));
+
+function amount_phone(array) {
+  return array
+    .filter(function (prices) {
+      return prices.price >= 200 && prices.price <= 450;
+    })
+    .map(function (value) {
+      return value.price + value.price;
+    })
+    .map((obj) => {
+      return Math.pow(obj, 2);
+    }).reduce((sum,value) => {
+      return sum + value
+    })
+}
+console.log(amount_phone([
+  {Phone: "infinix", price: 215},
+  {Phone: "samsung", price: 312},
+  {Phone: "Iphone", price: 800},
+  {Phone: "Red MI", price: 400},
+  {Phone: "Iphone", price: 555}
+]))
