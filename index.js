@@ -1609,3 +1609,14 @@ console.log(amount_phone([
   {Phone: "Red MI", price: 400},
   {Phone: "Iphone", price: 555}
 ]))
+
+function array_length(array) {
+  const length = [];
+  let access = 0
+  for(i = 0; i < array.length; i++) {
+      access = array[i]
+      length.push(access.length)
+  }
+  return length
+}
+console.log(array_length([[1,2,3],[2,3,4],[7,1]]))
