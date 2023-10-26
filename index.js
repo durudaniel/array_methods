@@ -1598,25 +1598,45 @@ function amount_phone(array) {
     })
     .map((obj) => {
       return Math.pow(obj, 2);
-    }).reduce((sum,value) => {
-      return sum + value
     })
+    .reduce((sum, value) => {
+      return sum + value;
+    });
 }
-console.log(amount_phone([
-  {Phone: "infinix", price: 215},
-  {Phone: "samsung", price: 312},
-  {Phone: "Iphone", price: 800},
-  {Phone: "Red MI", price: 400},
-  {Phone: "Iphone", price: 555}
-]))
+console.log(
+  amount_phone([
+    { Phone: "infinix", price: 215 },
+    { Phone: "samsung", price: 312 },
+    { Phone: "Iphone", price: 800 },
+    { Phone: "Red MI", price: 400 },
+    { Phone: "Iphone", price: 555 },
+  ])
+);
 
 function array_length(array) {
   const length = [];
-  let access = 0
-  for(i = 0; i < array.length; i++) {
-      access = array[i]
-      length.push(access.length)
+  let access = 0;
+  for (i = 0; i < array.length; i++) {
+    access = array[i];
+    length.push(access.length);
   }
-  return length
+  return length;
 }
-console.log(array_length([[1,2,3],[2,3,4],[7,1]]))
+console.log(
+  array_length([
+    [1, 2, 3],
+    [2, 3, 4],
+    [7, 1],
+  ])
+);
+
+function arr_length(array) {
+  return array.length;
+}
+console.log(
+  arr_length([
+    [1, 2, 3],
+    [2, 3, 4],
+    [7, 1],
+  ])
+);
