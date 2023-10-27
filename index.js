@@ -1640,3 +1640,11 @@ console.log(
     [7, 1],
   ])
 );
+
+function fruit2(object) {
+  const index = object[0].charAt(0).toUpperCase();
+  const element = object[0].slice(1,5)
+  return index.concat(element)
+  
+}
+console.log(fruit2(["apple"]))
