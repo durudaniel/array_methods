@@ -1643,8 +1643,14 @@ console.log(
 
 function fruit2(object) {
   const index = object[0].charAt(0).toUpperCase();
-  const element = object[0].slice(1,5)
-  return index.concat(element)
-  
+  const element = object[0].slice(1, 6);
+  return index.concat(element);
 }
-console.log(fruit2(["apple"]))
+console.log(fruit2(["apple"]));
+
+function fruit3(fruit) {
+  return fruit.map((a) => {
+    return a[0].toUpperCase().concat(a.slice(1));
+  });
+}
+console.log(fruit3(["apple", "pineapple", "mango", "cherry"]));
