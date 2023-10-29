@@ -1654,3 +1654,17 @@ function fruit3(fruit) {
   });
 }
 console.log(fruit3(["apple", "pineapple", "mango", "cherry"]));
+
+function capitalize(arrayString) {
+  return arrayString
+    .filter((value) => {
+      const indexOf = typeof value;
+      return indexOf === "string";
+    })
+    .map((caps) => caps[0].toUpperCase().concat(caps.slice(1)))
+    .sort((a, b) => {
+      if (a < b) return -1;
+      if (a > b) return 1;
+    });
+}
+console.log(capitalize([1, 2, true, false, "jenny", "tommy", "sergi"]));
