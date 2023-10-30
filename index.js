@@ -1668,3 +1668,32 @@ function capitalize(arrayString) {
     });
 }
 console.log(capitalize([1, 2, true, false, "jenny", "tommy", "sergi"]));
+
+function check_test(array) {
+  const stringType = array
+    .filter((type) => {
+      const the_index = typeof type;
+      return the_index === "string";
+    })
+    .map((value) => value[0].toUpperCase().concat(value.slice(1)));
+  const numberType = array
+    .filter((type2) => {
+      const the_index2 = typeof type2;
+      return the_index2 === "number";
+    })
+    .map((value2) => {
+      if (value2 % 2 === 0) return value2 + 1;
+      else return value2;
+    });
+  const boolType = array
+    .filter((type3) => {
+      const the_index3 = typeof type3;
+      return the_index3 === "boolean";
+    })
+    .map((value3) => {
+      if (value3 === true) return false;
+      if (value3 === false) return true;
+    });
+  return [stringType, numberType, boolType];
+}
+console.log(check_test(["daniel", 20, 11, false, true, "chisom"]));
