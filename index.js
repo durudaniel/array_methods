@@ -1697,3 +1697,15 @@ function check_test(array) {
   return [stringType, numberType, boolType];
 }
 console.log(check_test(["daniel", 20, 11, false, true, "chisom"]));
+
+function amplitude(temp1, temp2) {
+  const temp3 = temp1.concat(temp2);
+  let max = temp3[0];
+  let min = temp3[0];
+  for (i = 0; i < temp3.length; i++) {
+    if (temp3[i] > max) max = temp3[i];
+    if (temp3[i] < min) min = temp3[i];
+  }
+  return [min, max];
+}
+console.log(amplitude([1, 0, 3, 6, 8], [10, 14, 70, 170]));
