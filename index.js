@@ -1709,3 +1709,13 @@ function amplitude(temp1, temp2) {
   return [min, max];
 }
 console.log(amplitude([1, 0, 3, 6, 8], [10, 14, 70, 170]));
+
+function printForecast(arr) {
+  let pusher = ""
+    for (i = 0; i < arr.length ; i++) {
+      pusher += `${arr[i]}°C in ${i + 1} days ...`
+    }
+    return pusher
+}
+console.log(printForecast([17, 21, 23]));
+
