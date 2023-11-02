@@ -1718,3 +1718,9 @@ function printForecast(arr) {
   return pusher;
 }
 console.log(printForecast([17, 21, 23]));
+
+// write a javascript code that increase a number by it's value
+const numIncrease = function (number, value) {
+  return Array.apply(null, Array(number)).map(Number.prototype.valueOf, value);
+};
+console.log(numIncrease(3,12))
