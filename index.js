@@ -1724,3 +1724,12 @@ const numIncrease = function (number, value) {
   return Array.apply(null, Array(number)).map(Number.prototype.valueOf, value);
 };
 console.log(numIncrease(3,12))
+
+const friends_str = function (array) {
+  let forFriend = ""
+  for( i = 0; i < array.length; i++) {
+    forFriend += `my ${i + 1} friend is ${array[i]}... `;
+  }
+  return forFriend
+}
+console.log(friends_str(["gift","osmond","favor"]))
