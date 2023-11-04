@@ -1733,3 +1733,14 @@ const friends_str = function (array) {
   return forFriend;
 };
 console.log(friends_str(["gift", "osmond", "favor"]));
+
+function myFriend(array) {
+  return array
+    .filter((value) => {
+      return value === "gift" || value === "osmond";
+    })
+    .map((value2) => {
+      return `${value2} is my best friend`;
+    });
+}
+console.log(myFriend(["gift", "osmond", "favor"]));
