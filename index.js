@@ -1747,7 +1747,16 @@ function myFriend(array) {
 console.log(myFriend(["gift", "osmond", "favor"]));
 
 function toJoin(stringifiedArray) {
-  let stringify = ""
-  return stringify = stringify + stringifiedArray.join(",");
+  let stringify = "";
+  return (stringify = stringify + stringifiedArray.join(","));
 }
 console.log(toJoin(["green", "blue", "red", "orange"]));
+
+function capitalizeAndJoin(stringifiedArray) {
+  return stringifiedArray
+    .map((value) => {
+      return value[0].toUpperCase().concat(value.slice(1));
+    })
+    .join(",");
+}
+console.log(capitalizeAndJoin(["gift", "osmond", "favor", "green", "blue"]));
