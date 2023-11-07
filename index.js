@@ -1643,10 +1643,10 @@ console.log(
 
 function fruit2(object) {
   const index = object[0].charAt(0).toUpperCase();
-  const element = object[0].slice(1, 6);
+  const element = object[0].slice(1);
   return index.concat(element);
 }
-console.log(fruit2(["apple"]));
+console.log(fruit2(["communication"]));
 
 function fruit3(fruit) {
   return fruit.map((a) => {
@@ -1727,8 +1727,9 @@ console.log(numIncrease(3, 12));
 
 const friends_str = function (array) {
   let forFriend = "";
+  const nth = ["st", "nd", "rd"];
   for (i = 0; i < array.length; i++) {
-    forFriend += `my ${i + 1} friend is ${array[i]}... `;
+    forFriend += `my ${i + 1}${nth[i]} friend is ${array[i]}... `;
   }
   return forFriend;
 };
@@ -1744,3 +1745,9 @@ function myFriend(array) {
     });
 }
 console.log(myFriend(["gift", "osmond", "favor"]));
+
+function toJoin(stringifiedArray) {
+  let stringify = ""
+  return stringify = stringify + stringifiedArray.join(",");
+}
+console.log(toJoin(["green", "blue", "red", "orange"]));
