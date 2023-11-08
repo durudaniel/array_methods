@@ -1760,3 +1760,12 @@ function capitalizeAndJoin(stringifiedArray) {
     .join(",");
 }
 console.log(capitalizeAndJoin(["gift", "osmond", "favor", "green", "blue"]));
+
+const alphabet = "forden";
+for (i in alphabet) {
+  if ("f" === alphabet[i]) console.log(`${alphabet[i]}-${alphabet.slice(1)}`);
+  else {
+    console.log(false);
+  }
+  break;
+}
