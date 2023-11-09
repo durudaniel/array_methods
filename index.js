@@ -1770,15 +1770,26 @@ for (i in alphabet) {
   break;
 }
 function underScore(num) {
-  const str = num.toString()
+  const str = num.toString();
   const result = [str[0]];
-  for(i = 1; i < str.length; i++) {
-    if((str[i - 1] % 2 === 0) && (str[i] % 2 === 0))
-      result.push("-",str[i])
-    else{
-      result.push(str[i])
+  for (i = 1; i < str.length; i++) {
+    if (str[i - 1] % 2 === 0 && str[i] % 2 === 0) result.push("-", str[i]);
+    else {
+      result.push(str[i]);
     }
   }
-  return result.join('')
+  return result.join("");
 }
-console.log(underScore(window.prompt()))
+console.log(underScore(window.prompt()));
+
+// write a javascript to add two array with different lengths
+function differentLength(array1, array2) {
+  const pusher = [];
+  const arrayLength = Math.max(array1.length, array2.length);
+  for (let index = 0; index < arrayLength; index++) {
+    const sum = (array1[index] || 0) + (array2[index] || 0);
+    pusher.push(sum);
+  }
+  return pusher;
+}
+console.log(differentLength([1, 2, 7, 9], [10, 67, 18, 0, 1]));
