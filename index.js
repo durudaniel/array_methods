@@ -1586,7 +1586,6 @@ function max_and_min(arr1, arr2) {
   const maxValue = min_max_result[0].max;
   return [minValue, maxValue];
 }
-console.log(max_and_min([12, 45, 67, 8], [2, 0, 3, 5]));
 
 function amount_phone(array) {
   return array
@@ -1603,15 +1602,6 @@ function amount_phone(array) {
       return sum + value;
     });
 }
-console.log(
-  amount_phone([
-    { Phone: "infinix", price: 215 },
-    { Phone: "samsung", price: 312 },
-    { Phone: "Iphone", price: 800 },
-    { Phone: "Red MI", price: 400 },
-    { Phone: "Iphone", price: 555 },
-  ])
-);
 
 function array_length(array) {
   const length = [];
@@ -1622,38 +1612,22 @@ function array_length(array) {
   }
   return length;
 }
-console.log(
-  array_length([
-    [1, 2, 3],
-    [2, 3, 4],
-    [7, 1],
-  ])
-);
 
 function arr_length(array) {
   return array.length;
 }
-console.log(
-  arr_length([
-    [1, 2, 3],
-    [2, 3, 4],
-    [7, 1],
-  ])
-);
 
 function fruit2(object) {
   const index = object[0].charAt(0).toUpperCase();
   const element = object[0].slice(1);
   return index.concat(element);
 }
-console.log(fruit2(["communication"]));
 
 function fruit3(fruit) {
   return fruit.map((a) => {
     return a[0].toUpperCase().concat(a.slice(1));
   });
 }
-console.log(fruit3(["apple", "pineapple", "mango", "cherry"]));
 
 function capitalize(arrayString) {
   return arrayString
@@ -1667,7 +1641,6 @@ function capitalize(arrayString) {
       if (a > b) return 1;
     });
 }
-console.log(capitalize([1, 2, true, false, "jenny", "tommy", "sergi"]));
 
 function check_test(array) {
   const stringType = array
@@ -1696,7 +1669,6 @@ function check_test(array) {
     });
   return [stringType, numberType, boolType];
 }
-console.log(check_test(["daniel", 20, 11, false, true, "chisom"]));
 
 function amplitude(temp1, temp2) {
   const temp3 = temp1.concat(temp2);
@@ -1708,7 +1680,6 @@ function amplitude(temp1, temp2) {
   }
   return [min, max];
 }
-console.log(amplitude([1, 0, 3, 6, 8], [10, 14, 70, 170]));
 
 function printForecast(arr) {
   let pusher = "";
@@ -1717,13 +1688,11 @@ function printForecast(arr) {
   }
   return pusher;
 }
-console.log(printForecast([17, 21, 23]));
 
 // write a javascript code that increase a number by it's value
 const numIncrease = function (number, value) {
   return Array.apply(null, Array(number)).map(Number.prototype.valueOf, value);
 };
-console.log(numIncrease(3, 12));
 
 const friends_str = function (array) {
   let forFriend = "";
@@ -1733,7 +1702,6 @@ const friends_str = function (array) {
   }
   return forFriend;
 };
-console.log(friends_str(["gift", "osmond", "favor"]));
 
 function myFriend(array) {
   return array
@@ -1744,13 +1712,11 @@ function myFriend(array) {
       return `${value2} is my best friend`;
     });
 }
-console.log(myFriend(["gift", "osmond", "favor"]));
 
 function toJoin(stringifiedArray) {
   let stringify = "";
   return (stringify = stringify + stringifiedArray.join(","));
 }
-console.log(toJoin(["green", "blue", "red", "orange"]));
 
 function capitalizeAndJoin(stringifiedArray) {
   return stringifiedArray
@@ -1759,7 +1725,6 @@ function capitalizeAndJoin(stringifiedArray) {
     })
     .join(",");
 }
-console.log(capitalizeAndJoin(["gift", "osmond", "favor", "green", "blue"]));
 
 const alphabet = "forden";
 for (i in alphabet) {
