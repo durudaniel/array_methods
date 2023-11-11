@@ -1295,7 +1295,6 @@ console.log("number element =", sumAllNUm([2, 3, 0, 5, 7, 8, true, false]));
 function thirdSmallestNum(thirdNum) {
   return thirdNum.sort((a, b) => a - b)[thirdNum.length - 3];
 }
-console.log("third num =", thirdSmallestNum([2, 3, 5, 7, 1]));
 
 // Given an array of objects representing products, write a function that
 // filters out products with a price greater than $50
@@ -1317,14 +1316,14 @@ function filterExpensiveProducts(products) {
       return key.name.toUpperCase();
     });
 }
-console.log(
+/*console.log(
   filterExpensiveProducts([
     { name: "Laptop", price: 800 },
     { name: "Smartphone", price: 600 },
     { name: "Headphones", price: 30 },
     { name: "Tablet", price: 120 },
   ])
-);
+);*/
 
 /* Given an array of numbers, write a function that performs the following operations:
 // 1. Remove all even numbers from the array.
@@ -1344,7 +1343,6 @@ function to_remove_even(array) {
     .map((value) => Math.pow(value, 2))
     .reduce((sum, value) => sum + value, 0);
 }
-console.log("odd = ", to_remove_even([2, 3, 5, 7, 8]));
 
 function toFill(value, fill) {
   return Array.apply(null, Array(fill))
@@ -1352,13 +1350,10 @@ function toFill(value, fill) {
     .splice(0, 3);
 }
 
-console.log(toFill(2, 7));
-
 function toDivide(number) {
   const result = [Math.floor(number / 2), Math.ceil(number / 2)];
   return result;
 }
-console.log("number = ", toDivide(10));
 
 function BMI(massMark, heightMark, massJohn, heightJohn) {
   const BMIMark = massMark / (heightMark * heightMark);
@@ -1385,7 +1380,6 @@ function tip_and_bill(bill) {
 function third_num(array) {
   return array.sort((a, b) => a - b)[array.length - 3];
 }
-console.log(" third_num 💋", third_num([1, 2, 3, 4, 5, 6]));
 
 function maths_abs(arr1, arr2) {
   let result = [];
@@ -1399,10 +1393,6 @@ function maths_abs(arr1, arr2) {
   }
   return result;
 }
-console.log(
-  "Âbsolute summing😎 = ",
-  maths_abs([1, 2, 3, 4, 10], [17, -10, 4, -15, 2])
-);
 
 function compute_winner(score1, score2, score3) {
   return (score1 + score2 + score3) / 3;
@@ -1418,19 +1408,16 @@ const checkWinner = (avgDolphins, avgKoalas) => {
     return "No one WINs... 💔💔💔";
   }
 };
-console.log("outcome =", checkWinner(scoreDolphins, scoreKoalas));
 
 function alertArray(array) {
   const array2 = [2, 4, 6, 8];
   return array.concat(array2).length;
 }
-console.log(alertArray([1, 3, 5, 7, 9]));
 
 function to_construct(numberToArray) {
   const trans = new Array(numberToArray);
   return trans;
 }
-console.log(to_construct(34, 3, 4, 5));
 
 /*Steven wants you to improve his tip calculator, using the same rules as before — tip 15% of 
 the bill if the bill value is between 50 and 300, and if the value is different, the tip 
@@ -1462,7 +1449,7 @@ function toCalcTip(tip) {
   const totals = [bills[0] + tip[0], bills[1] + tip[1], bills[2] + tip[2]];
   return totals;
 }
-console.log(toCalcTip(tip));
+
 const jonas = {
   firstName: "jonas",
   lastName: "schnnetman",
@@ -1475,13 +1462,13 @@ const jonas = {
     return this.age;
   },
 };
-console.log(
+/*console.log(
   `${jonas.firstName} is a ${jonas.calcAge()} year old man, and ${
     jonas.hasDriversLicense
       ? "has a driver's license " + "✔"
       : "didn't have a drivers license" + "🚫"
   }`
-);
+);*/
 
 const mark = {
   fullName: "Mark Miller",
@@ -1510,16 +1497,15 @@ function bmiResult() {
     )!`;
   }
 }
-console.log(bmiResult());
 
 for (let iterate = 1; iterate < 5; iterate++) {
-  console.log(`food🍕 ${iterate} is served in plate 🍽 ${iterate}`);
+  //console.log(`food🍕 ${iterate} is served in plate 🍽 ${iterate}`);
 }
 
 function loop_in_name(array) {
   for (let index = 1; index <= array.length; index++) {
     for (let count = 1; count < array.length + 1; count++) {
-      console.log(`food ${index} is giving to ${array[index]} `);
+      //console.log(`food ${index} is giving to ${array[index]} `);
     }
   }
 }
@@ -1534,7 +1520,6 @@ function getType(array) {
   }
   return result;
 }
-console.log(getType([1, 1, 3, "bed", "lion"]));
 
 /*const calcTip1 = function (bill) {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
@@ -1557,8 +1542,6 @@ for (let i = 0; i < billse.length; i++) {
   //totals.push(tips[value] + billse[value]);
   totals.push(tip + billse[value])
 }*/
-console.log(tips);
-console.log(totals);
 
 function uniqueNum(array, array2) {
   const result = [];
@@ -1573,8 +1556,6 @@ function uniqueNum(array, array2) {
     return a - b;
   });
 }
-console.log(uniqueNum([1, 2, 3, 5, 4], [100, 8, 4, 3]));
-
 // Write a javscript code to return the [max,min] in an array containing numbers
 function max_and_min(arr1, arr2) {
   const min_max_result = [arr1, arr2].map(() => {
