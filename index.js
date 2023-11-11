@@ -1284,7 +1284,7 @@ function sumAllNUm(numArray) {
   return numArray
     .filter((number) => {
       const typeOf = typeof number;
-      return typeOf;
+      return typeOf === "number";
     })
     .reduce((sum, value) => {
       return sum + value;
