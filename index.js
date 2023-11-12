@@ -1035,7 +1035,7 @@ function difference(arr1, arr2) {
   });
 }
 
-console.log("difference =", difference([1, 2, 3], [100, 2, 1, 10]));
+//console.log("difference =", difference([1, 2, 3], [100, 2, 1, 10]));
 
 function retrieve(arr1) {
   return arr1.filter((value) => {
@@ -1077,7 +1077,7 @@ function union(arr1, arr2) {
     return arr1.concat(arr2);
   });
 }
-console.log("union =", union([1, 2, 3], [3, 4, 6]));
+//console.log("union =", union([1, 2, 3], [3, 4, 6]));
 
 function union1(arr1, arr2) {
   const result = [];
@@ -1098,8 +1098,8 @@ function union1(arr1, arr2) {
     return a - b;
   });
 }
-console.log(" union1 =", union1([1, 2, 3], [100, 2, 1, 10]));
-console.log(" union1 =", union1([2, 3, 4, 5], [7, 3, 2, 8]));
+//console.log(" union1 =", union1([1, 2, 3], [100, 2, 1, 10]));
+//console.log(" union1 =", union1([2, 3, 4, 5], [7, 3, 2, 8]));
 
 function library1(titles) {
   return titles.sort((a, b) => {
@@ -1107,18 +1107,6 @@ function library1(titles) {
     if (a.title > b.title) return 1;
   });
 }
-console.log(
-  "title =",
-  library1([
-    { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
-    { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
-    {
-      author: "Suzanne Collins",
-      title: "Mockingjay: The Final Book of The Hunger Games",
-      libraryID: 3245,
-    },
-  ])
-);
 
 // write a javascript code to remove a specific element from an array
 
@@ -1127,24 +1115,26 @@ function remove_array_element(remove) {
   const secondIndex = remove[1];
   return [firstIndex, secondIndex];
 }
-console.log("remove = ", remove_array_element([2, 5, 9, 6]));
+//console.log("remove = ", remove_array_element([2, 5, 9, 6]));
 
 function toRemove(arr1, num) {
   const result = [];
-  for (i = 0; i < arr1.length; i++) {
-    if (arr1[i] === num) arr1.splice(1, 1);
-    result.push(arr1[i]);
+  let findIndex = 0;
+  for (index = 0; index < arr1.length; index++) {
+    findIndex = arr1.indexOf(num);
+    if (findIndex !== -1) arr1.splice(findIndex, 1);
+    result.push(arr1[index]);
   }
   return result;
 }
-console.log("remove =", toRemove([2, 5, 9, 6], 5));
+//console.log("remove =", toRemove([2, 5, 9, 6], 2));
 
 function find_specific(arr1, num) {
   for (i = 0; i < arr1.length; i++) if (arr1[i] === num) return true;
 
   return false;
 }
-console.log("find =", find_specific([2, 5, 9, 6], 5));
+//console.log("find =", find_specific([2, 5, 9, 6], 5));
 
 function removeNum(arr1, num) {
   const result = [];
@@ -1156,7 +1146,7 @@ function removeNum(arr1, num) {
   }
   return result;
 }
-console.log("remove =", removeNum([2, 5, 9, 6], 6));
+//console.log("remove =", removeNum([2, 5, 9, 6], 2));
 
 // write a javascript to empty an array and return the original
 
@@ -1164,12 +1154,11 @@ function emptyArray(array) {
   array = 0;
   if (array === 0) return [];
 }
-console.log("array is =", emptyArray([1, 3, 4, 5]));
+//console.log("array is =", emptyArray([1, 3, 4, 5]));
 
 function to_get_random(elements) {
   return elements[Math.floor(Math.random() * elements.length)];
 }
-console.log("random number is =", to_get_random([6, 7, 8, 20, 90]));
 
 //write a javascript function to move an array from one position to another
 // [10, 20, 30, 50, 40],[20, 30, 10, 40, 50],
@@ -1195,11 +1184,6 @@ function filter_array_values(array_value) {
   );
 }
 
-console.log(
-  "array_value =",
-  filter_array_values([58, "", "abcd", true, null, false, 0])
-);
-
 function unique_element(arr1, arr2) {
   const result = [];
   for (i = 0; i < arr1.length; i++) {
@@ -1210,7 +1194,6 @@ function unique_element(arr1, arr2) {
   }
   return result;
 }
-console.log("unique element", unique_element([1, 2, 3], [100, 2, 1, 10]));
 
 /* write a javascript function to add two arrays element when once length is longer than 
 the other*/
@@ -1226,7 +1209,6 @@ function to_add(arr1, arr2) {
 }
 //const array1 = [8, 0, 18, 20, 41];
 //const array2 = [6, 8, 2, 4];
-console.log("sum =", to_add([8, 0, 18, 20, 41], [6, 8, 2, 4]));
 
 //write a javascript code to get absolute sum of an two array
 function get_abs_sum(arr1, arr2) {
@@ -1241,7 +1223,6 @@ function get_abs_sum(arr1, arr2) {
   }
   return result;
 }
-console.log("absolute Calc", get_abs_sum([1, -2, 7, -10], [-8, 11, 20, -3]));
 
 //write a javascript code to return the max and min of an array
 function array_max_min(arr1, arr2) {
@@ -1256,7 +1237,6 @@ function array_max_min(arr1, arr2) {
   const minResult = result[0].min;
   return [maxResult, minResult];
 }
-console.log("minMax =", array_max_min([100, 80, -110], [70, 10, 50]));
 
 /*function array_filled(num, value) {
   const pre_filled = Array.apply(null, Array(num)).map(
