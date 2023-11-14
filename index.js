@@ -1719,3 +1719,16 @@ function differentLength(array1, array2) {
   return pusher;
 }
 console.log(differentLength([1, 2, 7, 9], [10, 67, 18, 0, 1]));
+
+// write a javascript to target a number in an array
+function target_nums(array, number) {
+  const pusher = [];
+  let index = 0;
+  for (i = 0; i < array.length; i++) {
+    index = array.indexOf(number);
+    if (index !== -1) array.splice(index, 1);
+    pusher.push(array[i]);
+  }
+  return pusher;
+}
+console.log(target_nums([2, 3, 4, 7, 9], 4));
