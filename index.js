@@ -1732,3 +1732,8 @@ function target_nums(array, number) {
   return pusher;
 }
 console.log(target_nums([2, 3, 4, 7, 9], 4));
+
+function myColor(array) {
+  return array.join("+");
+}
+console.log(myColor(["Red", "Green", "White", "Black"]));
