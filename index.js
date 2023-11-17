@@ -1718,7 +1718,6 @@ function differentLength(array1, array2) {
   }
   return pusher;
 }
-console.log(differentLength([1, 2, 7, 9], [10, 67, 18, 0, 1]));
 
 // write a javascript to target a number in an array
 function target_nums(array, number) {
@@ -1731,9 +1730,7 @@ function target_nums(array, number) {
   }
   return pusher;
 }
-console.log(target_nums([2, 3, 4, 7, 9], 4));
 
 function myColor(array) {
   return array.join("+");
 }
-console.log(myColor(["Red", "Green", "White", "Black"]));
