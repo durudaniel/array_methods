@@ -1695,18 +1695,6 @@ for (i in alphabet) {
   }
   break;
 }
-function underScore(num) {
-  const str = num.toString();
-  const result = [str[0]];
-  for (i = 1; i < str.length; i++) {
-    if (str[i - 1] % 2 === 0 && str[i] % 2 === 0) result.push("-", str[i]);
-    else {
-      result.push(str[i]);
-    }
-  }
-  return result.join("");
-}
-console.log(underScore(window.prompt()));
 
 // write a javascript to add two array with different lengths
 function differentLength(array1, array2) {
