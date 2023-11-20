@@ -1729,4 +1729,3 @@ function toCapital(arr) {
     element[0].toUpperCase().concat(element.slice(1))
   );
 }
-console.log(toCapital(["opay", "palmpay", "flutterwave"]));
