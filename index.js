@@ -1724,8 +1724,3 @@ function myColor(array) {
 }
 // write a javascript code to capitalize the first letter elements in an array
 // test ["opay","palmpay","flutterwave"]
-function toCapital(arr) {
-  return arr.map((element) =>
-    element[0].toUpperCase().concat(element.slice(1))
-  );
-}
