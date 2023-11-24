@@ -1719,3 +1719,16 @@ function toCapital(arr) {
     element[0].toUpperCase().concat(element.slice(1))
   );
 }
+
+// write a javaScript code to target a duplicate number
+function target_duplicate(array, number) {
+  const result = [];
+  let targeter = 0;
+  for (index = 0; index < array.length; index++) {
+    targeter = array.indexOf(number);
+    if (targeter > -1) array.splice(targeter, 1);
+    result.push(array[index]);
+  }
+  return result;
+}
+console.log(target_duplicate([20, 14, 2, 5], 2));
