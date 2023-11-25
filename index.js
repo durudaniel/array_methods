@@ -1731,4 +1731,3 @@ function target_duplicate(array, number) {
   }
   return result;
 }
-console.log(target_duplicate([20, 14, 2, 5], 2));
