@@ -1750,4 +1750,3 @@ function target_arrays(arr1, arr2) {
 
   return result;
 }
-console.log(target_arrays([12, 3, 4, 5, 6, 10], [1, 8, 9, 0, 4, 5]));
