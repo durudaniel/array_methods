@@ -1731,7 +1731,6 @@ function target_duplicate(array, number) {
   }
   return result;
 }
-console.log(target_duplicate([20, 14, 2, 5], 2));
 
 function target_arrays(arr1, arr2) {
   const result = [];
@@ -1750,3 +1749,4 @@ function target_arrays(arr1, arr2) {
 
   return result;
 }
+console.log(target_arrays([12, 3, 4, 5, 6, 10], [1, 8, 9, 0, 4, 5]));
