@@ -1731,22 +1731,4 @@ function target_duplicate(array, number) {
   }
   return result;
 }
-
-function target_arrays(arr1, arr2) {
-  const result = [];
-  let targeter1 = 0;
-  //let targeter2 = 0;
-  for (arr1_index = 0; arr1_index < arr1; arr1_index++) {
-    targeter1 = arr2.indexOf(arr1);
-    if (targeter1 > -1) arr1.splice(targeter1, 1);
-    result.push(arr1[arr1_index]);
-  }
-  for (arr2_index = 0; arr2_index < arr2; arr2_index++) {
-    targeter1 = arr1.indexOf(arr2);
-    if (targeter1 > -1) arr2.splice(targeter1, 1);
-    result.push(arr2[arr2_index]);
-  }
-
-  return result;
-}
-console.log(target_arrays([12, 3, 4, 5, 6, 10], [1, 8, 9, 0, 4, 5]));
+console.log(target_duplicate([20, 14, 2, 5], 2));
