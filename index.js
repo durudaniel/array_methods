@@ -1,5 +1,5 @@
 const copy_detail = { music_name: "dax", net_worth: "$1000000" };
-const copy_origin = { country: "nigerai" };
+const copy_origin = { country: "nigeria" };
 const concat_detail_origin = { ...copy_detail, ...copy_origin };
 
 //spread two arrays and square root each element
@@ -49,6 +49,7 @@ for (var [keys, values] of countryAndStateMap.entries()) {
 // write a javascript to add the length of array on each element
 const arrMap = [2, 3, 7, 8, 9];
 const mapOut = arrMap.map((length) => length + arrMap.length);
+console.log(mapOut);
 
 function lengthOfAnArray(arrLength, number) {
   if (arrLength.length >= number)
@@ -910,10 +911,10 @@ function tuckInArrayString(arrString1, arrString2) {
     .splice(0, 1);
 }
 
-/*console.log(
+console.log(
   "tuck in = ",
   tuckInArrayString(["pawpaw", "apple"], ["strawberry", "cherry"])
-);*/
+);
 
 // write a javascript code to remove all strings from an array
 
@@ -1630,7 +1631,7 @@ function check_test(array) {
     });
   return [stringType, numberType, boolType];
 }
-
+//console.log(check_test(["chisom", "uche", 12, 7, true, false]));
 function amplitude(temp1, temp2) {
   const temp3 = temp1.concat(temp2);
   let max = temp3[0];
@@ -1649,11 +1650,16 @@ function printForecast(arr) {
   }
   return pusher;
 }
+console.log(printForecast([32, 45, 56, 45]));
 
-// write a javascript code that increase a number by it's value
-const numIncrease = function (number, value) {
-  return Array.apply(null, Array(number)).map(Number.prototype.valueOf, value);
+// write a javascript code that increase a value by it's number of frequency
+const numIncrease = function (numberOfFrequency, value) {
+  return Array.apply(null, Array(numberOfFrequency)).map(
+    Number.prototype.valueOf,
+    value
+  );
 };
+console.log(numIncrease(3, 4));
 
 const friends_str = function (array) {
   let forFriend = "";
@@ -1671,14 +1677,17 @@ function myFriend(array) {
     })
     .map((value2) => {
       return `${value2} is my best friend`;
-    });
+    })
+    .join(", ");
 }
+//console.log(myFriend(["osmond", "gift", "osita"]));
 
 function toJoin(stringifiedArray) {
   let stringify = "";
-  return (stringify = stringify + stringifiedArray.join(","));
+  return (stringify += stringifiedArray.join(","));
+  /*or return (stringify = stringify + stringifiedArray.join(",")*/
 }
-
+console.log(toJoin(["mummy", "daddy", "sister"]));
 function capitalizeAndJoin(stringifiedArray) {
   return stringifiedArray
     .map((value) => {
@@ -1712,6 +1721,8 @@ function differentLength(array1, array2) {
 function myColor(array) {
   return array.join("+");
 }
+//console.log(myColor(["red", "blue", "orange"]));
+
 // write a javascript code to capitalize the first letter elements in an array
 // test ["opay","palmpay","flutterwave"]
 function toCapital(arr) {
@@ -1719,6 +1730,8 @@ function toCapital(arr) {
     element[0].toUpperCase().concat(element.slice(1))
   );
 }
+
+console.log(toCapital(["opay", "palmpay", "flutterwave"]));
 
 // write a javaScript code to target a duplicate number
 function target_duplicate(array, number) {
@@ -1731,4 +1744,31 @@ function target_duplicate(array, number) {
   }
   return result;
 }
-console.log(target_duplicate([20, 14, 2, 5], 2));
+console.log(target_duplicate([20, 14, 2, 5], 20));
+
+/**************************
+ GONNA FIGURE THIS OUT SOONER
+****************************/
+
+function target_arrays(arr1, arr2) {
+  const result = [];
+  let targeter1 = 0;
+  //let targeter2 = 0;
+  for (arr1_index = 0; arr1_index < arr1.length; arr1_index++) {
+    targeter1 = arr2.indexOf(arr1);
+    if (targeter1 > -1) arr1.splice(targeter1, 1);
+    result.push(arr1[arr1_index]);
+  }
+  for (arr2_index = 0; arr2_index < arr2.length; arr2_index++) {
+    targeter1 = arr1.indexOf(arr2);
+    if (targeter1 > -1) arr2.splice(targeter1, 1);
+    result.push(arr2[arr2_index]);
+  }
+
+  return result;
+}
+console.log(target_arrays([12, 3, 4, 5, 6, 10], [1, 8, 9, 0, 4, 5]));
+
+/*********************************
+ *
+ */
